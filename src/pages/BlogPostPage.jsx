@@ -37,6 +37,12 @@ export default function BlogPostPage() {
             {p.back}
           </Button>
 
+          {post.image && (
+            <div className="w-full rounded-2xl overflow-hidden mb-10" style={{ aspectRatio: '21 / 9' }}>
+                <img src={post.image} alt="" className="w-full h-full object-cover" />
+            </div>
+            )}
+
           {post.category && (
             <span className="inline-block text-xs font-bold px-3 py-1 rounded-full bg-impact/10 text-impact mb-6">
               {post.category}
