@@ -58,6 +58,27 @@
       <input type="tel" name="telephone" />
     </form>
 
+    <!--
+      Netlify Identity — nécessaire ICI (pas seulement dans /admin) car les
+      liens d'invitation/confirmation/récupération de mot de passe reçus par
+      e-mail redirigent vers la racine du site. Sans ce script sur cette
+      page, le jeton contenu dans l'URL (#confirmation_token=...) n'est
+      intercepté par personne et la fenêtre "définir un mot de passe" ne
+      s'ouvre jamais.
+    -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', (user) => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/'
+            })
+          }
+        })
+      }
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
