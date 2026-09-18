@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+locale: "fr"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Article"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - label: "Catégorie"
+        name: "category"
+        widget: "select"
+        options: ["Communication", "Audiovisuel", "Marketing", "Réseaux sociaux", "Branding"]
+      - { label: "Extrait (aperçu sur la liste des articles)", name: "excerpt", widget: "text" }
+      - { label: "Image de couverture", name: "image", widget: "image", required: false }
+      - { label: "Contenu de l'article", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Sections du site"
+    editor:
+      preview: false
+    files:
+      - name: "stats"
+        label: "Chiffres clés (accueil)"
+        file: "content/settings/stats.json"
+        fields:
+          - name: "items"
+            label: "Chiffres"
+            widget: "list"
+            summary: "{{fields.label}} — {{fields.value}}"
+            fields:
+              - { label: "Valeur (ex. 50+, 3, 100%)", name: "value", widget: "string" }
+              - { label: "Libellé", name: "label", widget: "string" }
+
+      - name: "testimonials"
+        label: "Témoignages clients"
+        file: "content/settings/testimonials.json"
+        fields:
+          - name: "items"
+            label: "Témoignages"
+            widget: "list"
+            summary: "{{fields.author}}"
+            fields:
+              - { label: "Citation", name: "quote", widget: "text" }
+              - { label: "Nom", name: "author", widget: "string" }
+              - { label: "Fonction / Organisation", name: "role", widget: "string" }

@@ -1,0 +1,298 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "portfolio": "Réalisations",
+    "contact": "Contact",
+    "ctaButton": "Nous contacter",
+    "blog": "Blog",
+    "resources": "Ressources",
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "services": "Services",
+      "portfolio": "Réalisations",
+      "contact": "Contact",
+      "ctaButton": "Nous contacter",
+      "resources": "Ressources"
+    }
+  },
+  "hero": {
+    "badge": "Agence de communication — Ouagadougou",
+    "titleLine1": "Votre image.",
+    "titleLine2": "Votre impact.",
+    "titleLine3": "Votre visibilité.",
+    "subtitle": "IVC Nexus transforme vos ambitions en récits visuels puissants — production audiovisuelle, communication digitale et stratégie de marque au cœur de l'Afrique de l'Ouest.",
+    "ctaPrimary": "Découvrir nos services",
+    "ctaSecondary": "Demander un devis",
+    "scroll": "Défiler"
+  },
+  "aboutPreview": {
+    "title1": "Une agence au cœur",
+    "title2": "de votre vision",
+    "text1": "IVC Nexus est une agence de production audiovisuelle et de communication intégrée fondée à Ouagadougou, Burkina Faso. Notre mission : donner à chaque organisation les outils visuels et stratégiques pour rayonner, convaincre et marquer les esprits.",
+    "text2": "De la conception à la diffusion, nous accompagnons entreprises, institutions et ONG dans la construction d'une image forte, cohérente et impactante — locale et internationale.",
+    "cta": "En savoir plus sur nous",
+    "badgeNumber": "3+",
+    "badgeLabel": "Années d'excellence"
+  },
+  "whyUs": {
+    "title": "Pourquoi choisir IVC Nexus ?",
+    "subtitle": "Ce qui distingue notre accompagnement, projet après projet.",
+    "items": [
+      { "icon": "Target", "title": "Expertise", "description": "Une maîtrise complète de la chaîne de production, de l'idée au support final." },
+      { "icon": "Zap", "title": "Réactivité", "description": "Des délais tenus et une équipe disponible à chaque étape du projet." },
+      { "icon": "Lightbulb", "title": "Créativité", "description": "Des concepts originaux, pensés pour marquer durablement votre public." },
+      { "icon": "Handshake", "title": "Accompagnement", "description": "Un interlocuteur unique qui vous conseille du brief à la livraison." },
+      { "icon": "CheckCircle2", "title": "Qualité", "description": "Un contrôle qualité rigoureux sur chaque livrable, sans compromis." },
+      { "icon": "Link2", "title": "Approche intégrée", "description": "Audiovisuel, digital, graphisme et stratégie réunis sous un même toit." }
+    ]
+  },
+  "method": {
+    "title": "Notre méthode de travail",
+    "subtitle": "Un processus clair, du premier échange à l'accompagnement après livraison.",
+    "steps": [
+      { "title": "Analyse", "description": "Nous étudions votre besoin, votre cible et vos objectifs de communication." },
+      { "title": "Proposition", "description": "Nous vous soumettons une proposition claire : approche, délais, budget." },
+      { "title": "Planification", "description": "Nous organisons les ressources et le calendrier de production." },
+      { "title": "Production", "description": "Nos équipes réalisent le contenu : tournage, création, impression." },
+      { "title": "Validation", "description": "Vous validez chaque étape clé avant la suite de la production." },
+      { "title": "Livraison", "description": "Les livrables finaux vous sont remis dans les formats convenus." },
+      { "title": "Accompagnement", "description": "Nous restons disponibles après livraison pour tout ajustement." }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "note": "Témoignages fictifs, à titre d'exemple — à remplacer par les avis réels de vos clients.",
+    "items": [
+      { "quote": "Une équipe réactive et créative, à l'écoute de nos besoins du début à la fin du projet.", "author": "Nom Prénom", "role": "Responsable communication, Entreprise" },
+      { "quote": "Un accompagnement professionnel qui a donné une vraie identité visuelle à notre association.", "author": "Nom Prénom", "role": "Directeur, ONG" },
+      { "quote": "Des livrables de qualité, dans les délais annoncés. Nous recommandons IVC Nexus.", "author": "Nom Prénom", "role": "Fondateur, Start-up" }
+    ]
+  },
+  "partners": {
+    "title": "Ils nous font confiance",
+    "note": "Emplacements réservés pour les logos de vos clients et partenaires."
+  },
+  "aboutPage": {
+    "title": "À propos d'IVC Nexus",
+    "historyTitle": "Notre histoire",
+    "historyText": "IVC Nexus est née à Ouagadougou d'une conviction simple : chaque organisation, quelle que soit sa taille, mérite une image à la hauteur de son ambition. Depuis nos débuts, nous accompagnons des entreprises, institutions et ONG dans la création de contenus qui marquent durablement leur public.",
+    "missionTitle": "Notre mission",
+    "missionText": "Donner à chaque client les outils visuels et stratégiques nécessaires pour rayonner, convaincre et marquer les esprits — à travers une approche intégrée qui va de la production audiovisuelle à la stratégie de communication.",
+    "visionTitle": "Notre vision",
+    "visionText": "Votre image. Votre impact. Votre visibilité.",
+    "valuesTitle": "Nos valeurs",
+    "values": [
+      "Exigence et qualité dans chaque livrable",
+      "Créativité mise au service du sens",
+      "Écoute et accompagnement sur mesure",
+      "Intégrité et transparence avec nos clients"
+    ],
+    "capabilitiesTitle": "Capacités opérationnelles",
+    "capabilitiesNote": "Informations à mettre à jour ultérieurement par IVC Nexus.",
+    "capabilities": [
+      { "icon": "Users", "label": "Ressources humaines", "text": "Une équipe pluridisciplinaire — à détailler prochainement." },
+      { "icon": "Camera", "label": "Équipements", "text": "Matériel de production audiovisuelle — liste à fournir." },
+      { "icon": "Laptop", "label": "Logiciels", "text": "Suites de montage, design et gestion de projet utilisées." },
+      { "icon": "Handshake", "label": "Partenaires", "text": "Réseau de partenaires techniques et créatifs — à préciser." }
+    ],
+    "teamTitle": "Notre équipe",
+    "teamText": "Les informations sur l'équipe seront ajoutées prochainement."
+  },
+  "servicesSection": {
+    "title": "Nos Services",
+    "subtitle": "Des solutions complètes pour bâtir, projeter et amplifier votre identité de marque.",
+    "cta": "En savoir plus",
+    "viewAll": "Voir tous les services",
+    "quoteButton": "Demander un devis",
+    "bookButton": "Réserver ce service",
+    "advantagesTitle": "Avantages",
+    "faqTitle": "Questions fréquentes",
+    "relatedTitle": "Réalisations associées",
+    "list": [
+      {
+        "icon": "Video",
+        "title": "Production Audiovisuelle",
+        "description": "Films institutionnels, spots publicitaires, couverture d'événements, montage vidéo et motion design.",
+        "subservices": ["Photographie professionnelle", "Couverture événementielle", "Vidéo corporate", "Film institutionnel", "Interviews", "Podcasts", "Aftermovies", "Captation d'événements"],
+        "advantages": ["Matériel professionnel", "Équipe expérimentée", "Livraison rapide"],
+        "faq": [
+          { "q": "Quel est le délai moyen de livraison d'une vidéo ?", "a": "Selon la complexité, comptez 1 à 3 semaines entre le tournage et la livraison finale." },
+          { "q": "Fournissez-vous le matériel de tournage ?", "a": "Oui, notre équipe se déplace avec l'ensemble du matériel nécessaire (caméras, éclairage, son)." }
+        ]
+      },
+      {
+        "icon": "Smartphone",
+        "title": "Communication Digitale",
+        "description": "Stratégie social media, gestion de communautés, publicité en ligne et campagnes digitales 360°.",
+        "subservices": ["Community management", "Création de contenus", "Gestion des réseaux sociaux", "Publicité Meta", "Stratégie digitale"],
+        "advantages": ["Contenus adaptés à chaque plateforme", "Reporting régulier", "Veille des tendances"],
+        "faq": [
+          { "q": "Gérez-vous les publicités payantes ?", "a": "Oui, nous concevons et pilotons vos campagnes publicitaires Meta (Facebook/Instagram)." },
+          { "q": "À quelle fréquence publiez-vous du contenu ?", "a": "La fréquence est définie ensemble selon vos objectifs et votre budget." }
+        ]
+      },
+      {
+        "icon": "Palette",
+        "title": "Création Graphique",
+        "description": "Identité visuelle, affiches, brochures, flyers et supports de communication sur mesure.",
+        "subservices": ["Affiches", "Flyers", "Dépliants", "Rapports", "Brochures", "Identité visuelle"],
+        "advantages": ["Univers graphique cohérent", "Fichiers sources fournis", "Révisions incluses"],
+        "faq": [
+          { "q": "Livrez-vous les fichiers sources ?", "a": "Oui, les fichiers modifiables vous sont remis à la livraison finale." },
+          { "q": "Combien de séries de retouches sont incluses ?", "a": "Deux séries de retouches sont incluses par défaut, au-delà un devis complémentaire peut s'appliquer." }
+        ]
+      },
+      {
+        "icon": "Printer",
+        "title": "Impression",
+        "description": "Supports publicitaires, impression grand format, signalétique et supports événementiels.",
+        "subservices": ["Supports publicitaires", "Impression grand format", "Signalétique", "Supports événementiels"],
+        "advantages": ["Finitions premium", "Délais maîtrisés", "Réseau de partenaires imprimeurs"],
+        "faq": [
+          { "q": "Quels formats d'impression proposez-vous ?", "a": "Du flyer au grand format (bâches, kakémonos), selon vos besoins." },
+          { "q": "Livrez-vous sur site ?", "a": "Oui, la livraison peut être organisée sur Ouagadougou et ses environs." }
+        ]
+      },
+      {
+        "icon": "BarChart3",
+        "title": "Conseil et Stratégie",
+        "description": "Audit de communication, diagnostic, accompagnement et stratégie de visibilité sur mesure.",
+        "subservices": ["Audit", "Diagnostic", "Accompagnement", "Stratégie de communication"],
+        "advantages": ["Recommandations concrètes", "Accompagnement dans la durée", "Approche adaptée à votre secteur"],
+        "faq": [
+          { "q": "En quoi consiste un audit de communication ?", "a": "Une analyse de vos supports actuels, votre positionnement et vos canaux, avec des recommandations priorisées." },
+          { "q": "Proposez-vous un suivi dans le temps ?", "a": "Oui, un accompagnement mensuel ou trimestriel peut être mis en place selon vos besoins." }
+        ]
+      }
+    ]
+  },
+  "portfolioSection": {
+    "title": "Nos Réalisations",
+    "subtitle": "Un aperçu de nos productions — chaque projet, un engagement de qualité.",
+    "viewAll": "Voir tout le portfolio",
+    "filters": { "Tout": "Tout", "Vidéo": "Vidéo", "Photo": "Photo", "Infographie": "Infographie", "Impression": "Impression" },
+    "sectorFilters": { "Tous secteurs": "Tous secteurs", "Entreprise": "Entreprise", "Institution": "Institution", "ONG": "ONG", "Particulier": "Particulier", "Événementiel": "Événementiel" }
+  },
+  "stats": {
+    "note": "Chiffres indicatifs, à remplacer par vos données réelles dès qu'elles seront disponibles.",
+    "items": [
+      { "value": "50+", "label": "Projets Réalisés" },
+      { "value": "3", "label": "Ans d'Expertise" },
+      { "value": "30+", "label": "Clients Satisfaits" },
+      { "value": "100%", "label": "Ouagadougou & environs" }
+    ]
+  },
+  "clients": {
+    "eyebrow": "Nous travaillons avec",
+    "items": [
+      { "icon": "Building2", "label": "Entreprises" },
+      { "icon": "Landmark", "label": "Institutions" },
+      { "icon": "Globe2", "label": "ONG & Associations" },
+      { "icon": "User", "label": "Particuliers" },
+      { "icon": "GraduationCap", "label": "Universités" },
+      { "icon": "HeartPulse", "label": "Santé & Social" }
+    ]
+  },
+  "ctaBand": {
+    "title": "Prêt à donner vie à votre projet ?",
+    "subtitle": "Contactez-nous dès aujourd'hui pour un devis gratuit. Notre équipe est prête à transformer votre vision en impact.",
+    "callBtn": "Appeler maintenant",
+    "emailBtn": "Envoyer un message",
+    "disclaimer": "Numéro et email provisoires — à remplacer par vos coordonnées réelles."
+  },
+  "footer": {
+    "tagline": "Votre image. Votre impact. Votre visibilité.",
+    "navTitle": "Navigation",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "address": "Ouagadougou, Burkina Faso",
+    "legal1": "Mentions légales",
+    "legal2": "Politique de confidentialité",
+    "rights": "Tous droits réservés."
+  },
+  "contactPage": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question, un projet ? Écrivez-nous ou demandez un devis directement.",
+    "generalFormTitle": "Message général",
+    "devisFormTitle": "Demande de devis",
+    "fields": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "organisation": "Organisation",
+      "message": "Votre message",
+      "service": "Service concerné",
+      "date": "Date souhaitée",
+      "budget": "Budget estimatif",
+      "description": "Décrivez votre projet",
+      "attachment": "Pièce jointe (optionnel)"
+    },
+    "submit": "Envoyer",
+    "submitDevis": "Envoyer la demande",
+    "success": "Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement.",
+    "coordinatesTitle": "Coordonnées",
+    "socialsTitle": "Réseaux sociaux"
+  },
+  "langToggle": { "fr": "FR", "en": "EN" },
+  
+  "blogPage": {
+    "title": "Blog",
+    "subtitle": "Conseils et actualités sur la communication et l'audiovisuel.",
+    "readMore": "Lire la suite",
+    "back": "← Retour au blog",
+    "empty": "Aucun article pour le moment.",
+    "languageNote": ""
+  },
+  "caseStudy": {
+    "back": "← Retour aux réalisations",
+    "contextTitle": "Contexte",
+    "needTitle": "Besoin",
+    "solutionTitle": "Solution apportée",
+    "resultTitle": "Résultat",
+    "galleryTitle": "Galerie",
+    "ctaTitle": "Un projet similaire en tête ?",
+    "ctaText": "Parlons de votre projet et voyons comment nous pouvons vous aider.",
+    "notFound": "Réalisation introuvable."
+  },
+  
+  "sectorsPage": {
+    "title": "Secteurs d'intervention",
+    "subtitle": "Une approche adaptée à chaque type d'organisation, quels que soient ses enjeux de communication.",
+    "sectors": [
+      { "icon": "Building2", "title": "Entreprises", "description": "PME, startups et grands groupes qui veulent une image de marque professionnelle et cohérente.", "examples": ["Films corporate", "Identité visuelle", "Gestion des réseaux sociaux", "Supports commerciaux"] },
+      { "icon": "Globe2", "title": "ONG", "description": "Organisations locales et internationales qui doivent rendre compte de leur impact avec clarté.", "examples": ["Rapports d'activité illustrés", "Reportages terrain", "Supports de sensibilisation", "Communication de campagne"] },
+      { "icon": "Landmark", "title": "Institutions", "description": "Administrations et collectivités qui communiquent auprès du grand public.", "examples": ["Films institutionnels", "Couverture d'événements officiels", "Supports d'information", "Signalétique"] },
+      { "icon": "Users", "title": "Associations", "description": "Structures associatives qui veulent gagner en visibilité et fédérer leurs membres.", "examples": ["Affiches et flyers", "Pages réseaux sociaux", "Captation d'assemblées", "Supports de collecte de fonds"] },
+      { "icon": "PartyPopper", "title": "Événementiel", "description": "Organisateurs de forums, festivals, séminaires et cérémonies.", "examples": ["Captation photo/vidéo d'événement", "Aftermovies", "Signalétique événementielle", "Diffusion en direct"] },
+      { "icon": "User", "title": "Particuliers", "description": "Projets personnels — mariages, portraits, projets créatifs individuels.", "examples": ["Reportage photo", "Vidéo souvenir", "Impressions personnalisées", "Portraits professionnels"] }
+    ]
+  },
+  "faqPage": {
+    "title": "Foire aux questions",
+    "subtitle": "Les réponses aux questions qu'on nous pose le plus souvent.",
+    "items": [
+      { "q": "Quels sont vos délais de réalisation ?", "a": "Cela dépend du service : de quelques jours pour un support graphique simple à plusieurs semaines pour une production vidéo complète. Un délai précis est toujours communiqué dans le devis." },
+      { "q": "Comment fonctionne votre tarification ?", "a": "Chaque projet est unique : le tarif dépend du service, de la complexité et du délai souhaité. Nous établissons un devis détaillé et gratuit après un premier échange." },
+      { "q": "Comment demander un devis ?", "a": "Via le formulaire de demande de devis sur la page Contact, en précisant le service, la date souhaitée et une description de votre projet. Nous répondons sous 48h ouvrées." },
+      { "q": "Comment réserver un service ?", "a": "Utilisez le bouton \"Réserver ce service\" sur la page Services, ou contactez-nous directement pour vérifier nos disponibilités." },
+      { "q": "Dans quelles zones intervenez-vous ?", "a": "Nous intervenons principalement à Ouagadougou et ses environs. Des déplacements dans d'autres régions ou pays sont possibles selon le projet, à discuter ensemble." },
+      { "q": "Quels moyens de paiement acceptez-vous ?", "a": "Les modalités de paiement (acompte, échéances, moyens acceptés) sont précisées dans chaque devis et adaptées à la nature du projet." },
+      { "q": "Puis-je demander des modifications après livraison ?", "a": "Un nombre de révisions est inclus selon le service (voir la page Services). Des ajustements supplémentaires peuvent faire l'objet d'un devis complémentaire." }
+    ]
+  },
+  "downloadsPage": {
+    "title": "Espace téléchargements",
+    "subtitle": "Les documents utiles pour mieux connaître IVC Nexus.",
+    "note": "Documents à venir — cette section sera complétée dès que les fichiers définitifs seront fournis par IVC Nexus.",
+    "documents": [
+      { "icon": "Presentation", "title": "Présentation institutionnelle", "description": "Une présentation complète de l'agence, sa mission et son savoir-faire." },
+      { "icon": "FileText", "title": "Catalogue des services", "description": "Le détail de l'ensemble de nos prestations et de nos pôles d'expertise." },
+      { "icon": "BookOpen", "title": "Brochures", "description": "Supports de présentation à partager avec vos équipes ou partenaires." },
+      { "icon": "ClipboardList", "title": "Fiches techniques", "description": "Spécifications techniques par type de service (formats, délais, livrables)." }
+    ],
+    "comingSoon": "Bientôt disponible"
+  }
+}

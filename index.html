@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IVC Nexus — Votre image. Votre impact. Votre visibilité.</title>
+    <meta name="description" content="IVC Nexus — Production audiovisuelle et communication intégrée à Ouagadougou. Vidéo, photo, création graphique, impression et stratégie de communication." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%81%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!--
+      Google Tag Manager — désactivé pour le moment.
+      Une fois l'ID de conteneur récupéré (voir README.md), décommenter ce
+      script et remplacer GTM-XXXXXXX. Ne l'activer qu'après mise en place
+      du bandeau de consentement cookies (voir README.md).
+    -->
+    <!--
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX')
+    </script>
+    -->
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      Formulaires statiques "fantômes" pour Netlify Forms.
+      Netlify détecte les formulaires au moment du build en analysant le HTML statique.
+      Comme nos vrais formulaires sont rendus par React (donc absents du HTML au build),
+      on duplique ici leur structure exacte, cachée, pour que Netlify les enregistre.
+      Ne pas supprimer — voir README.md, section "Formulaires Netlify".
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="nom" />
+      <input type="email" name="email" />
+      <input type="tel" name="telephone" />
+      <input type="text" name="organisation" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="devis" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input type="text" name="service" />
+      <input type="text" name="date_souhaitee" />
+      <input type="text" name="budget" />
+      <textarea name="description"></textarea>
+      <input type="file" name="piece_jointe" />
+      <input type="text" name="nom" />
+      <input type="email" name="email" />
+      <input type="tel" name="telephone" />
+    </form>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
