@@ -9,10 +9,14 @@ import Testimonials from '../sections/Testimonials'
 import Clients from '../sections/Clients'
 import Partners from '../sections/Partners'
 import CTABand from '../sections/CTABand'
+import Seo from '../components/Seo'
+import { useLanguage } from '../i18n/LanguageContext'
 
 export default function Home() {
+  const { t } = useLanguage()
   return (
     <>
+      <Seo title={t.seo.home.title} description={t.seo.home.description} />
       <Hero />
       <AboutPreview />
       <WhyUs />

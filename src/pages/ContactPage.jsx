@@ -9,6 +9,8 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { submitNetlifyForm } from '../utils/submitNetlifyForm'
 import { MapPin, Phone, Mail } from 'lucide-react'
 import { FacebookIcon, LinkedinIcon, InstagramIcon, TiktokIcon, YoutubeIcon } from '../components/ui/SocialIcons'
+import Seo from '../components/Seo'
+import BookingWidget from '../components/BookingWidget'
 
 function SuccessNote({ children }) {
   return (
@@ -59,6 +61,7 @@ export default function ContactPage() {
 
   return (
     <>
+      <Seo title={t.seo.contact.title} description={t.seo.contact.description} />
       <PageHeader title={c.title} subtitle={c.subtitle} />
 
       <section className="py-16 lg:py-20 bg-white">
@@ -115,6 +118,18 @@ export default function ContactPage() {
               {devisError && <p className="text-sm text-red-600">Erreur d'envoi — réessayez ou écrivez-nous directement par e-mail.</p>}
             </form>
           </RevealBlock>
+
+          <section className="py-16 lg:py-20 bg-white">
+            <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+              <RevealBlock className="text-center mb-10">
+                <h2 className="text-2xl font-black text-nexus mb-2">{c.bookingTitle}</h2>
+                <p className="text-slateText">{c.bookingSubtitle}</p>
+              </RevealBlock>
+              <RevealBlock delay={100} className="rounded-2xl overflow-hidden border border-gray-100" style={{ minHeight: '600px' }}>
+                <BookingWidget />
+              </RevealBlock>
+            </div>
+          </section>
         </div>
       </section>
 

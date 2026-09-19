@@ -1,4 +1,13 @@
 {
+  "seo": {
+    "home": { "title": "Audiovisual production & integrated communication", "description": "IVC Nexus supports businesses, institutions and NGOs in Ouagadougou with audiovisual production, digital communication, graphic design and printing." },
+    "about": { "title": "About", "description": "Discover IVC Nexus: our story, mission, values and the sectors we support in Ouagadougou, Burkina Faso." },
+    "services": { "title": "Our services", "description": "Audiovisual production, digital communication, graphic design, printing and communication strategy — discover our 5 areas of expertise." },
+    "portfolio": { "title": "Our work", "description": "Explore our video, photo, graphic design and print work, filterable by media type and industry." },
+    "contact": { "title": "Contact", "description": "Get in touch with IVC Nexus to discuss your project or request a free quote." },
+    "blog": { "title": "Blog", "description": "Tips and news from IVC Nexus on communication, audiovisual production and marketing." }
+  },
+
   "nav": {
     "home": "Home",
     "about": "About",
@@ -218,6 +227,8 @@
     "subtitle": "A question, a project? Write to us or request a quote directly.",
     "generalFormTitle": "General message",
     "devisFormTitle": "Quote request",
+    "bookingTitle": "Book a call",
+    "bookingSubtitle": "Pick a time slot that works for you for a discovery call.",
     "fields": {
       "name": "Full name",
       "email": "Email address",

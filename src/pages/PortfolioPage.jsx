@@ -3,6 +3,7 @@ import PageHeader from '../components/PageHeader'
 import PortfolioCard from '../components/PortfolioCard'
 import { portfolioItems, mediaTypes, sectorTypes } from '../data/portfolioItems'
 import { useLanguage } from '../i18n/LanguageContext'
+import Seo from '../components/Seo'
 
 function FilterGroup({ options, active, onSelect, labels }) {
   return (
@@ -37,6 +38,7 @@ export default function PortfolioPage() {
 
   return (
     <>
+      <Seo title={t.seo.portfolio.title} description={t.seo.portfolio.description} />
       <PageHeader title={t.portfolioSection.title} subtitle={t.portfolioSection.subtitle} />
 
       <section className="py-16 lg:py-20 bg-white">

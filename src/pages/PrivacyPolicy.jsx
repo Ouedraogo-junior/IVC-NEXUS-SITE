@@ -12,8 +12,8 @@ export default function PrivacyPolicy() {
         <div className="max-w-3xl mx-auto px-6 text-slateText leading-loose text-sm flex flex-col gap-4">
           <p>
             {isFr
-              ? 'Ce site utilise Google Analytics 4 et Google Tag Manager pour mesurer sa fréquentation. Ces outils ne sont activés qu\'après votre consentement via le bandeau de cookies.'
-              : 'This site uses Google Analytics 4 and Google Tag Manager to measure traffic. These tools are only activated after your consent via the cookie banner.'}
+              ? "Ce site n'utilise pas d'outil de suivi ou de statistiques de visite (Google Analytics ou équivalent) et ne dépose pas de cookie à des fins de suivi publicitaire ou statistique."
+              : 'This site does not use any visitor tracking or analytics tool (such as Google Analytics) and does not place tracking cookies for advertising or statistical purposes.'}
           </p>
           <p>
             {isFr

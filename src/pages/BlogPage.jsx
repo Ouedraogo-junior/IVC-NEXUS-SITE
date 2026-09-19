@@ -4,6 +4,7 @@ import RevealBlock from '../components/RevealBlock'
 import Icon from '../components/ui/Icon'
 import { blogPosts } from '../data/blogPosts'
 import { useLanguage } from '../i18n/LanguageContext'
+import Seo from '../components/Seo'
 
 function formatDate(dateStr, lang) {
   const date = new Date(dateStr)
@@ -42,6 +43,7 @@ export default function BlogPage() {
 
   return (
     <>
+      <Seo title={t.seo.blog.title} description={t.seo.blog.description} />
       <PageHeader title={p.title} subtitle={p.subtitle} />
 
       <section className="py-16 lg:py-20 bg-white">

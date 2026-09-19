@@ -3,6 +3,8 @@ import Button from '../components/ui/Button'
 import RevealBlock from '../components/RevealBlock'
 import { useLanguage } from '../i18n/LanguageContext'
 import Icon from '../components/ui/Icon'
+import Seo from '../components/Seo'
+
 
 export default function AboutPage() {
   const { t } = useLanguage()
@@ -10,6 +12,7 @@ export default function AboutPage() {
 
   return (
     <>
+      <Seo title={t.seo.about.title} description={t.seo.about.description} />
       <PageHeader title={p.title} />
 
       <section className="py-20 lg:py-24 bg-white">
