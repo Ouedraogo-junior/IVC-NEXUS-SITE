@@ -10,7 +10,7 @@ export const portfolioItems = [
     sector: 'Entreprise',
     icon: 'Video',
     gradient: ['#1D3557', '#2a4a73'],
-    label: { fr: 'Spot publicitaire — Secteur bancaire', en: 'Ad spot — Banking sector' },
+    label: { fr: 'Spot publicitaire  Secteur bancaire', en: 'Ad spot  Banking sector' },
   },
   {
     id: 'p2',
@@ -18,7 +18,7 @@ export const portfolioItems = [
     sector: 'Événementiel',
     icon: 'Camera',
     gradient: ['#152844', '#1D3557'],
-    label: { fr: 'Couverture — Forum économique régional', en: 'Coverage — Regional economic forum' },
+    label: { fr: 'Couverture  Forum économique régional', en: 'Coverage  Regional economic forum' },
   },
   {
     id: 'p3',
@@ -26,7 +26,7 @@ export const portfolioItems = [
     sector: 'ONG',
     icon: 'BarChart3',
     gradient: ['#FF6B00', '#FFB066'],
-    label: { fr: 'Rapport annuel — ONG internationale', en: 'Annual report — International NGO' },
+    label: { fr: 'Rapport annuel  ONG internationale', en: 'Annual report  International NGO' },
   },
   {
     id: 'p4',
@@ -34,7 +34,7 @@ export const portfolioItems = [
     sector: 'Entreprise',
     icon: 'Printer',
     gradient: ['#0D1F33', '#1D3557'],
-    label: { fr: "Campagne d'affichage — Grande distribution", en: 'Billboard campaign — Retail chain' },
+    label: { fr: "Campagne d'affichage  Grande distribution", en: 'Billboard campaign  Retail chain' },
   },
   {
     id: 'p5',
@@ -42,7 +42,7 @@ export const portfolioItems = [
     sector: 'Institution',
     icon: 'Video',
     gradient: ['#2a4a73', '#1D3557'],
-    label: { fr: 'Film institutionnel — Collectivité locale', en: 'Institutional film — Local authority' },
+    label: { fr: 'Film institutionnel  Collectivité locale', en: 'Institutional film  Local authority' },
   },
   {
     id: 'p6',
@@ -50,7 +50,7 @@ export const portfolioItems = [
     sector: 'Événementiel',
     icon: 'Camera',
     gradient: ['#1D3557', '#152844'],
-    label: { fr: 'Reportage — Festival culturel', en: 'Reportage — Cultural festival' },
+    label: { fr: 'Reportage  Festival culturel', en: 'Reportage  Cultural festival' },
   },
   {
     id: 'p7',
@@ -58,7 +58,7 @@ export const portfolioItems = [
     sector: 'Particulier',
     icon: 'BarChart3',
     gradient: ['#FFB066', '#FF6B00'],
-    label: { fr: 'Identité visuelle — Start-up tech', en: 'Visual identity — Tech start-up' },
+    label: { fr: 'Identité visuelle  Start-up tech', en: 'Visual identity  Tech start-up' },
   },
   {
     id: 'p8',
@@ -66,7 +66,7 @@ export const portfolioItems = [
     sector: 'Entreprise',
     icon: 'Printer',
     gradient: ['#1D3557', '#0D1F33'],
-    label: { fr: 'Habillage véhicules — Flotte commerciale', en: 'Vehicle wrap — Commercial fleet' },
+    label: { fr: 'Habillage véhicules  Flotte commerciale', en: 'Vehicle wrap  Commercial fleet' },
   },
 ]
 

@@ -13,7 +13,7 @@ Demandez à voir des réalisations complètes, pas uniquement des extraits. Un b
 
 ## Une équipe qui comprend votre message
 
-Au-delà de la technique, une bonne agence pose des questions sur votre public cible et votre objectif avant de proposer une solution — pas l'inverse.
+Au-delà de la technique, une bonne agence pose des questions sur votre public cible et votre objectif avant de proposer une solution  pas l'inverse.
 
 ## Un accompagnement après la livraison
 

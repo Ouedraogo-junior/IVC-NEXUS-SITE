@@ -53,6 +53,35 @@ h1, h2, h3, h4, h5, h6 {
 .delay-500 { animation-delay: 0.5s; }
 .delay-600 { animation-delay: 0.6s; }
 
+/* ---- Délais de l'animation de la phrase ---- */
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+.delay-900 { animation-delay: 0.9s; }
+.delay-1000 { animation-delay: 1s; }
+.delay-1100 { animation-delay: 1.1s; }
+
+/* ---- Révélation ligne par ligne du titre du hero (effet "rideau") ---- */
+@keyframes lineReveal {
+  from { transform: translateY(110%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.hero-line-mask {
+  display: block;
+  overflow: hidden;
+}
+.hero-line-inner {
+  display: block;
+  opacity: 0;
+  animation: lineReveal 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-line-inner {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* ---- Scroll-reveal (used via useRevealOnScroll hook) ---- */
 .reveal {
   opacity: 0;
@@ -100,6 +129,29 @@ h1, h2, h3, h4, h5, h6 {
   scrollbar-width: none;
 }
 
+/* Diaporama de fond du hero (HeroBackgroundSlideshow) */
+@keyframes heroSlideFade {
+  0% { opacity: 0; transform: scale(1); }
+  4% { opacity: 1; }
+  21% { opacity: 1; }
+  25% { opacity: 0; transform: scale(1.08); }
+  100% { opacity: 0; transform: scale(1.08); }
+}
+.hero-slide {
+  animation: heroSlideFade 24s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    animation: none;
+    opacity: 1;
+  }
+  .hero-slide:not(:first-child) {
+    display: none;
+  }
+}
+
+/* Contenu des articles de blog, rendu depuis le markdown du CMS */
 .prose-blog {
   color: var(--slateText, #4A5568);
   line-height: 1.8;
@@ -118,8 +170,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
-.prose-blog p { margin-bottom: 1.25rem; }
-.prose-blog ul, .prose-blog ol { margin: 0 0 1.25rem 1.5rem; }
-.prose-blog li { margin-bottom: 0.5rem; }
-.prose-blog strong { color: var(--nexus); font-weight: 700; }
-.prose-blog a { color: var(--impact); text-decoration: underline; }
+.prose-blog p {
+  margin-bottom: 1.25rem;
+}
+.prose-blog ul,
+.prose-blog ol {
+  margin: 0 0 1.25rem 1.5rem;
+}
+.prose-blog li {
+  margin-bottom: 0.5rem;
+}
+.prose-blog strong {
+  color: var(--nexus);
+  font-weight: 700;
+}
+.prose-blog a {
+  color: var(--impact);
+  text-decoration: underline;
+}

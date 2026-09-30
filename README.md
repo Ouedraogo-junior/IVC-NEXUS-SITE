@@ -1,4 +1,4 @@
-# IVC Nexus — Site web
+# IVC Nexus  Site web
 
 Site vitrine d'IVC Nexus (Impact Vision Communication Nexus), construit en
 React (Vite) + Tailwind CSS, bilingue FR/EN, mobile-first et animé.
@@ -45,9 +45,9 @@ composants. C'est ce qui rend le site facile à faire évoluer.
 1. Pousser ce projet sur un dépôt Git (GitHub/GitLab/Bitbucket).
 2. Sur [netlify.com](https://netlify.com), "Add new site" → "Import an
    existing project" → connecter le dépôt.
-3. Build command : `npm run build` — Publish directory : `dist`.
+3. Build command : `npm run build`  Publish directory : `dist`.
 4. Une fois le domaine du client réservé, l'ajouter dans Netlify (Domain
-   settings) — Netlify fournit le certificat SSL automatiquement.
+   settings)  Netlify fournit le certificat SSL automatiquement.
 
 Le fichier `public/_redirects` est indispensable : sans lui, Netlify
 renverrait une erreur 404 si quelqu'un rafraîchit la page sur `/services` ou
@@ -57,22 +57,22 @@ statique qui ne connaît pas les routes React).
 ## Formulaires (Netlify Forms)
 
 Les formulaires (`ContactPage.jsx`) sont prêts à fonctionner sans backend ni
-outil tiers, via Netlify Forms — gratuit dans les volumes de ce site.
+outil tiers, via Netlify Forms  gratuit dans les volumes de ce site.
 
 Point important : Netlify détecte les formulaires en analysant le **HTML
 statique** au moment du build. Comme nos formulaires sont générés par React
 (donc absents du HTML brut), `index.html` contient une copie cachée de
-chaque formulaire (`contact` et `devis`) avec les mêmes champs — **ne pas les
+chaque formulaire (`contact` et `devis`) avec les mêmes champs  **ne pas les
 supprimer**. Si un champ est ajouté ou renommé dans `ContactPage.jsx`, il
 faut répercuter le changement dans ces formulaires fantômes.
 
 Les soumissions apparaissent dans Netlify sous Site → Forms. Une notification
 par e-mail peut être activée dans Forms → Settings → Form notifications.
 
-## CMS (Decap CMS) — à intégrer
+## CMS (Decap CMS)  à intégrer
 
 Pas encore installé dans ce projet. Pour la prochaine étape (édition du blog
-et des sections administrables — chiffres clés, témoignages) :
+et des sections administrables  chiffres clés, témoignages) :
 
 1. `public/admin/index.html` + `public/admin/config.yml` (configuration
    standard Decap CMS).

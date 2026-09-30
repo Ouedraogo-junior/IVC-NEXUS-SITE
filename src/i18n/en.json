@@ -2,7 +2,7 @@
   "seo": {
     "home": { "title": "Audiovisual production & integrated communication", "description": "IVC Nexus supports businesses, institutions and NGOs in Ouagadougou with audiovisual production, digital communication, graphic design and printing." },
     "about": { "title": "About", "description": "Discover IVC Nexus: our story, mission, values and the sectors we support in Ouagadougou, Burkina Faso." },
-    "services": { "title": "Our services", "description": "Audiovisual production, digital communication, graphic design, printing and communication strategy — discover our 5 areas of expertise." },
+    "services": { "title": "Our services", "description": "Audiovisual production, digital communication, graphic design, printing and communication strategy  discover our 5 areas of expertise." },
     "portfolio": { "title": "Our work", "description": "Explore our video, photo, graphic design and print work, filterable by media type and industry." },
     "contact": { "title": "Contact", "description": "Get in touch with IVC Nexus to discuss your project or request a free quote." },
     "blog": { "title": "Blog", "description": "Tips and news from IVC Nexus on communication, audiovisual production and marketing." }
@@ -28,11 +28,11 @@
     }
   },
   "hero": {
-    "badge": "Communication agency — Ouagadougou",
+    "badge": "Communication agency  Ouagadougou",
     "titleLine1": "Your image.",
     "titleLine2": "Your impact.",
     "titleLine3": "Your visibility.",
-    "subtitle": "IVC Nexus turns your ambitions into powerful visual stories — audiovisual production, digital communication and brand strategy at the heart of West Africa.",
+    "subtitle": "IVC Nexus turns your ambitions into powerful visual stories  audiovisual production, digital communication and brand strategy at the heart of West Africa.",
     "ctaPrimary": "Discover our services",
     "ctaSecondary": "Request a quote",
     "scroll": "Scroll"
@@ -41,7 +41,7 @@
     "title1": "An agency built around",
     "title2": "your vision",
     "text1": "IVC Nexus is an audiovisual production and integrated communication agency founded in Ouagadougou, Burkina Faso. Our mission: giving every organization the visual and strategic tools to stand out, convince and leave a mark.",
-    "text2": "From concept to distribution, we support companies, institutions and NGOs in building a strong, consistent and impactful image — locally and internationally.",
+    "text2": "From concept to distribution, we support companies, institutions and NGOs in building a strong, consistent and impactful image  locally and internationally.",
     "cta": "Learn more about us",
     "badgeNumber": "3+",
     "badgeLabel": "Years of excellence"
@@ -73,7 +73,7 @@
   },
   "testimonials": {
     "title": "What our clients say",
-    "note": "Sample testimonials — to be replaced with your clients' real reviews.",
+    "note": "Sample testimonials  to be replaced with your clients' real reviews.",
     "items": [
       { "quote": "A responsive, creative team that listened to our needs from start to finish.", "author": "Name Surname", "role": "Communications Manager, Company" },
       { "quote": "Professional support that gave our association a real visual identity.", "author": "Name Surname", "role": "Director, NGO" },
@@ -89,7 +89,7 @@
     "historyTitle": "Our story",
     "historyText": "IVC Nexus was born in Ouagadougou from a simple conviction: every organization, whatever its size, deserves an image worthy of its ambition. Since our beginnings, we have supported companies, institutions and NGOs in creating content that leaves a lasting mark on their audience.",
     "missionTitle": "Our mission",
-    "missionText": "To give every client the visual and strategic tools needed to stand out, convince and leave a mark — through an integrated approach spanning audiovisual production to communication strategy.",
+    "missionText": "To give every client the visual and strategic tools needed to stand out, convince and leave a mark  through an integrated approach spanning audiovisual production to communication strategy.",
     "visionTitle": "Our vision",
     "visionText": "Your image. Your impact. Your visibility.",
     "valuesTitle": "Our values",
@@ -102,10 +102,10 @@
     "capabilitiesTitle": "Operational capabilities",
     "capabilitiesNote": "Information to be updated later by IVC Nexus.",
     "capabilities": [
-      { "icon": "Users", "label": "Human resources", "text": "A multidisciplinary team — details to follow." },
-      { "icon": "Camera", "label": "Equipment", "text": "Audiovisual production gear — list to be provided." },
+      { "icon": "Users", "label": "Human resources", "text": "A multidisciplinary team  details to follow." },
+      { "icon": "Camera", "label": "Equipment", "text": "Audiovisual production gear  list to be provided." },
       { "icon": "Laptop", "label": "Software", "text": "Editing, design and project management suites used." },
-      { "icon": "Handshake", "label": "Partners", "text": "Network of technical and creative partners — to be detailed." }
+      { "icon": "Handshake", "label": "Partners", "text": "Network of technical and creative partners  to be detailed." }
     ],
     "teamTitle": "Our team",
     "teamText": "Team information will be added soon."
@@ -180,7 +180,7 @@
   },
   "portfolioSection": {
     "title": "Our Work",
-    "subtitle": "A glimpse of our productions — every project, a commitment to quality.",
+    "subtitle": "A glimpse of our productions  every project, a commitment to quality.",
     "viewAll": "View full portfolio",
     "filters": { "Tout": "All", "Vidéo": "Video", "Photo": "Photo", "Infographie": "Graphics", "Impression": "Print" },
     "sectorFilters": { "Tous secteurs": "All sectors", "Entreprise": "Business", "Institution": "Institution", "ONG": "NGO", "Particulier": "Individual", "Événementiel": "Events" }
@@ -210,7 +210,7 @@
     "subtitle": "Contact us today for a free quote. Our team is ready to turn your vision into impact.",
     "callBtn": "Call now",
     "emailBtn": "Send a message",
-    "disclaimer": "Phone number and email are placeholders — to be replaced with your real details."
+    "disclaimer": "Phone number and email are placeholders  to be replaced with your real details."
   },
   "footer": {
     "tagline": "Your image. Your impact. Your visibility.",
@@ -279,7 +279,7 @@
       { "icon": "Landmark", "title": "Institutions", "description": "Government bodies and local authorities communicating with the public.", "examples": ["Institutional films", "Coverage of official events", "Information materials", "Signage"] },
       { "icon": "Users", "title": "Associations", "description": "Associations wanting more visibility and a stronger sense of community among members.", "examples": ["Posters and flyers", "Social media pages", "Assembly filming", "Fundraising materials"] },
       { "icon": "PartyPopper", "title": "Events", "description": "Organizers of forums, festivals, seminars and ceremonies.", "examples": ["Event photo/video coverage", "Aftermovies", "Event signage", "Live streaming"] },
-      { "icon": "User", "title": "Individuals", "description": "Personal projects — weddings, portraits, individual creative projects.", "examples": ["Photo reportage", "Keepsake video", "Custom prints", "Professional portraits"] }
+      { "icon": "User", "title": "Individuals", "description": "Personal projects  weddings, portraits, individual creative projects.", "examples": ["Photo reportage", "Keepsake video", "Custom prints", "Professional portraits"] }
     ]
   },
   "faqPage": {
@@ -298,7 +298,7 @@
   "downloadsPage": {
     "title": "Downloads",
     "subtitle": "Useful documents to learn more about IVC Nexus.",
-    "note": "Documents coming soon — this section will be completed once final files are provided by IVC Nexus.",
+    "note": "Documents coming soon  this section will be completed once final files are provided by IVC Nexus.",
     "documents": [
       { "icon": "Presentation", "title": "Company profile", "description": "A complete overview of the agency, its mission and expertise." },
       { "icon": "FileText", "title": "Service catalog", "description": "Details of all our services and areas of expertise." },

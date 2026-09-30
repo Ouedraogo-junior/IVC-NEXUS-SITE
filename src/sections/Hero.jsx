@@ -1,5 +1,6 @@
 import Button from '../components/ui/Button'
 import { useLanguage } from '../i18n/LanguageContext'
+import HeroBackgroundSlideshow from '../components/HeroBackgroundSlideshow'
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -7,11 +8,12 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-nexus-dark">
       <div className="absolute inset-0">
+        <HeroBackgroundSlideshow />
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, rgba(29,53,87,1) 0%, rgba(13,31,51,1) 55%, rgba(29,53,87,.85) 100%)',
+              'linear-gradient(135deg, rgba(29,53,87,.75) 0%, rgba(13,31,51,.7) 55%, rgba(29,53,87,.6) 100%)',
           }}
         />
         <div
@@ -43,17 +45,23 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-fade-up delay-200 opacity-0" style={{ letterSpacing: '-0.02em' }}>
-            {t.hero.titleLine1} <span className="text-impact">{t.hero.titleLine2}</span>
-            <br />
-            {t.hero.titleLine3}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6" style={{ letterSpacing: '-0.02em' }}>
+            <span className="hero-line-mask">
+              <span className="hero-line-inner delay-200">{t.hero.titleLine1}</span>
+            </span>
+            <span className="hero-line-mask">
+              <span className="hero-line-inner delay-400 text-impact">{t.hero.titleLine2}</span>
+            </span>
+            <span className="hero-line-mask">
+              <span className="hero-line-inner delay-600">{t.hero.titleLine3}</span>
+            </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 animate-fade-up delay-300 opacity-0">
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 animate-fade-up delay-800 opacity-0">
             {t.hero.subtitle}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start animate-fade-up delay-400 opacity-0">
+          <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start animate-fade-up delay-1000 opacity-0">
             <Button to="/services" variant="primary" className="w-full sm:w-auto">
               {t.hero.ctaPrimary}
             </Button>

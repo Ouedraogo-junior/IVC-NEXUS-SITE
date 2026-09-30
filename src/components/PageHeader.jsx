@@ -1,9 +1,13 @@
-export default function PageHeader({ title, subtitle }) {
+import HeroBackgroundSlideshow from './HeroBackgroundSlideshow'
+import { aboutSlides } from '../data/heroSlides'
+
+export default function PageHeader({ title, subtitle, slides = aboutSlides }) {
   return (
     <section className="pt-36 pb-16 lg:pt-44 lg:pb-20 bg-nexus-dark relative overflow-hidden">
+      <HeroBackgroundSlideshow slides={slides} />
       <div
         className="absolute inset-0"
-        style={{ background: 'linear-gradient(135deg, rgba(29,53,87,1) 0%, rgba(13,31,51,1) 100%)' }}
+        style={{ background: 'linear-gradient(135deg, rgba(29,53,87,.82) 0%, rgba(13,31,51,.85) 100%)' }}
       />
       <div className="absolute top-10 right-10 w-64 h-64 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #FF6B00 0%, transparent 70%)' }} />
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 text-center">

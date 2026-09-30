@@ -4,6 +4,7 @@ import PortfolioCard from '../components/PortfolioCard'
 import { portfolioItems, mediaTypes, sectorTypes } from '../data/portfolioItems'
 import { useLanguage } from '../i18n/LanguageContext'
 import Seo from '../components/Seo'
+import { portfolioSlides } from '../data/heroSlides'
 
 function FilterGroup({ options, active, onSelect, labels }) {
   return (
@@ -39,7 +40,7 @@ export default function PortfolioPage() {
   return (
     <>
       <Seo title={t.seo.portfolio.title} description={t.seo.portfolio.description} />
-      <PageHeader title={t.portfolioSection.title} subtitle={t.portfolioSection.subtitle} />
+      <PageHeader title={t.portfolioSection.title} subtitle={t.portfolioSection.subtitle} slides={portfolioSlides}/>
 
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
@@ -49,7 +50,7 @@ export default function PortfolioPage() {
           </div>
 
           {filtered.length === 0 ? (
-            <p className="text-center text-slateText py-16">—</p>
+            <p className="text-center text-slateText py-16"></p>
           ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {filtered.map((item, i) => (

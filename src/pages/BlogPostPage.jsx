@@ -7,6 +7,7 @@ import Seo from '../components/Seo'
 import { blogPosts } from '../data/blogPosts'
 import { useLanguage } from '../i18n/LanguageContext'
 import { SITE_URL, SITE_NAME } from '../config/site'
+import { blogSlides } from '../data/heroSlides'
 
 function formatDate(dateStr, lang) {
   const date = new Date(dateStr)
@@ -49,7 +50,7 @@ export default function BlogPostPage() {
         <script type="application/ld+json">{JSON.stringify(articleJsonLd)}</script>
       </Helmet>
 
-      <PageHeader title={post.title} subtitle={formatDate(post.date, lang)} />
+      <PageHeader title={post.title} subtitle={formatDate(post.date, lang)} slides={blogSlides} />
 
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-6">

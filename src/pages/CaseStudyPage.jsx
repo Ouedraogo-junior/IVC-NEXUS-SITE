@@ -6,6 +6,7 @@ import Icon from '../components/ui/Icon'
 import { portfolioItems } from '../data/portfolioItems'
 import { useLanguage } from '../i18n/LanguageContext'
 import Seo from '../components/Seo'
+import { portfolioSlides } from '../data/heroSlides'
 
 function GalleryTile({ gradient, icon, delay }) {
   const [from, to] = gradient
@@ -45,7 +46,7 @@ export default function CaseStudyPage() {
   return (
     <>
       <Seo title={item.label[lang]} description={item.context[lang]} />
-      <PageHeader title={item.label[lang]} subtitle={`${t.portfolioSection.filters[item.type]} · ${t.portfolioSection.sectorFilters[item.sector]}`} />
+      <PageHeader title={item.label[lang]} subtitle={`${t.portfolioSection.filters[item.type]} · ${t.portfolioSection.sectorFilters[item.sector]}`} slides={portfolioSlides}/>
 
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">

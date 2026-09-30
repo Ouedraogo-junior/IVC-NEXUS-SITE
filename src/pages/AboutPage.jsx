@@ -4,6 +4,7 @@ import RevealBlock from '../components/RevealBlock'
 import { useLanguage } from '../i18n/LanguageContext'
 import Icon from '../components/ui/Icon'
 import Seo from '../components/Seo'
+import { aboutSlides } from '../data/heroSlides'
 
 
 export default function AboutPage() {
@@ -13,7 +14,7 @@ export default function AboutPage() {
   return (
     <>
       <Seo title={t.seo.about.title} description={t.seo.about.description} />
-      <PageHeader title={p.title} />
+      <PageHeader title={p.title} slides={aboutSlides} />
 
       <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16">

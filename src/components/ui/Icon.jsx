@@ -33,7 +33,7 @@ import {
 
 // Un seul endroit à mettre à jour pour ajouter une icône : on référence son
 // nom en chaîne de caractères dans les données (i18n/*.json, data/*.js),
-// jamais le composant directement — ça reste sérialisable en JSON.
+// jamais le composant directement  ça reste sérialisable en JSON.
 const icons = {
   Target,
   Zap,

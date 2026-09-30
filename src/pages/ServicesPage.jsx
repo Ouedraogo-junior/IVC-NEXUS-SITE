@@ -7,6 +7,7 @@ import { Check } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { serviceSlugs } from '../data/serviceSlugs'
 import Seo from '../components/Seo'
+import { servicesSlides } from '../data/heroSlides'
 
 const gradients = [
   ['#1D3557', '#2a4a73'],
@@ -39,7 +40,7 @@ export default function ServicesPage() {
   return (
     <>
       <Seo title={t.seo.services.title} description={t.seo.services.description} />
-      <PageHeader title={s.title} subtitle={s.subtitle} />
+      <PageHeader title={s.title} subtitle={s.subtitle} slides={servicesSlides} />
 
       <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-20">

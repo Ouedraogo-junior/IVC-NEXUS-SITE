@@ -37,7 +37,7 @@ collections:
           - name: "items"
             label: "Chiffres"
             widget: "list"
-            summary: "{{fields.label}} — {{fields.value}}"
+            summary: "{{fields.label}}  {{fields.value}}"
             fields:
               - { label: "Valeur (ex. 50+, 3, 100%)", name: "value", widget: "string" }
               - { label: "Libellé", name: "label", widget: "string" }

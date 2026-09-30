@@ -11,6 +11,7 @@ import { MapPin, Phone, Mail } from 'lucide-react'
 import { FacebookIcon, LinkedinIcon, InstagramIcon, TiktokIcon, YoutubeIcon } from '../components/ui/SocialIcons'
 import Seo from '../components/Seo'
 import BookingWidget from '../components/BookingWidget'
+import { contactSlides } from '../data/heroSlides'
 
 function SuccessNote({ children }) {
   return (
@@ -62,7 +63,7 @@ export default function ContactPage() {
   return (
     <>
       <Seo title={t.seo.contact.title} description={t.seo.contact.description} />
-      <PageHeader title={c.title} subtitle={c.subtitle} />
+      <PageHeader title={c.title} subtitle={c.subtitle} slides={contactSlides} />
 
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12">
@@ -85,7 +86,7 @@ export default function ContactPage() {
               <Button type="submit" variant="primary" className="self-start">
                 {c.submit}
               </Button>
-              {contactError && <p className="text-sm text-red-600">Erreur d'envoi — réessayez ou écrivez-nous directement par e-mail.</p>}
+              {contactError && <p className="text-sm text-red-600">Erreur d'envoi  réessayez ou écrivez-nous directement par e-mail.</p>}
             </form>
           </RevealBlock>
 
@@ -115,7 +116,7 @@ export default function ContactPage() {
               <Button type="submit" variant="outlineDark" className="self-start">
                 {c.submitDevis}
               </Button>
-              {devisError && <p className="text-sm text-red-600">Erreur d'envoi — réessayez ou écrivez-nous directement par e-mail.</p>}
+              {devisError && <p className="text-sm text-red-600">Erreur d'envoi  réessayez ou écrivez-nous directement par e-mail.</p>}
             </form>
           </RevealBlock>
 
