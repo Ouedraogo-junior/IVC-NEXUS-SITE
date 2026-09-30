@@ -102,7 +102,7 @@ export default function ContactPage() {
                 </label>
               </p>
               <FormField label={c.fields.service} as="select" name="service" defaultValue={preselectedService} options={serviceOptions} />
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <FormField label={c.fields.date} type="date" name="date_souhaitee" />
                 <FormField label={c.fields.budget} name="budget" placeholder="FCFA" />
               </div>
