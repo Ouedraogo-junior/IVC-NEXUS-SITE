@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Submission;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
@@ -47,15 +48,33 @@ class SubmissionController extends Controller
 
     public function destroy(Submission $submission): JsonResponse
     {
+        if ($submission->attachment_path) {
+            Storage::disk('local')->delete($submission->attachment_path);
+        }
         $submission->delete();
 
         return response()->json(['ok' => true]);
     }
 
+    /** Télécharge la pièce jointe d'un devis (réservé aux administrateurs connectés). */
+    public function attachment(Submission $submission): StreamedResponse
+    {
+        abort_unless(
+            $submission->attachment_path && Storage::disk('local')->exists($submission->attachment_path),
+            404
+        );
+
+        return Storage::disk('local')->download(
+            $submission->attachment_path,
+            $submission->attachment_name ?: 'piece-jointe',
+            ['X-Content-Type-Options' => 'nosniff']
+        );
+    }
+
     public function export(): StreamedResponse
     {
         $headers = ['Date', 'Type', 'Nom', 'E-mail', 'Téléphone', 'Organisation', 'Profil',
-            'Service', 'Budget', 'Date souhaitée', 'Message', 'Statut'];
+            'Service', 'Budget', 'Date souhaitée', 'Message', 'Pièce jointe', 'Statut'];
 
         return response()->streamDownload(function () use ($headers) {
             $out = fopen('php://output', 'w');
@@ -67,7 +86,7 @@ class SubmissionController extends Controller
                     fputcsv($out, array_map([$this, 'safeCell'], [
                         $s->created_at?->format('Y-m-d H:i'), $s->type, $s->name, $s->email, $s->phone,
                         $s->organisation, $s->profile, $s->service, $s->budget,
-                        $s->desired_date?->toDateString(), $s->message, $s->status,
+                        $s->desired_date?->toDateString(), $s->message, $s->attachment_name, $s->status,
                     ]), ',', '"', '');
                 }
             });

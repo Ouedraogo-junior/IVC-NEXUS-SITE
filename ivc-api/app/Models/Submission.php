@@ -10,7 +10,8 @@ class Submission extends Model
 
     protected $fillable = [
         'type', 'name', 'email', 'phone', 'organisation', 'profile', 'service',
-        'budget', 'desired_date', 'message', 'consent', 'lang', 'status', 'ip', 'user_agent',
+        'budget', 'desired_date', 'message', 'attachment_path', 'attachment_name',
+        'consent', 'lang', 'status', 'ip', 'user_agent',
     ];
 
     protected function casts(): array
@@ -32,6 +33,8 @@ class Submission extends Model
             'budget' => $this->budget,
             'desired_date' => $this->desired_date?->toDateString(),
             'message' => $this->message,
+            'has_attachment' => (bool) $this->attachment_path,
+            'attachment_name' => $this->attachment_name,
             'consent' => $this->consent,
             'lang' => $this->lang,
             'status' => $this->status,

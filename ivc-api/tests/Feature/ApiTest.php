@@ -11,6 +11,8 @@ use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 
 class ApiTest extends TestCase
 {
@@ -191,5 +193,56 @@ class ApiTest extends TestCase
 
         $csv = $this->get('/api/admin/submissions/export')->assertOk()->streamedContent();
         $this->assertStringContainsString("'=HYPERLINK", $csv);
+    }
+
+        public function test_quote_attachment_is_stored_privately_and_downloadable_by_admin_only(): void
+    {
+        Mail::fake();
+        Storage::fake('local');
+
+        $this->post('/api/quote', [
+            'name' => 'Ibrahim', 'email' => 'ibrahim@example.test', 'message' => 'Voir le cahier des charges joint.',
+            'attachment' => UploadedFile::fake()->create('cahier des charges.pdf', 200, 'application/pdf'),
+        ], ['Accept' => 'application/json'])->assertCreated();
+
+        $submission = Submission::firstOrFail();
+        $this->assertNotNull($submission->attachment_path);
+        $this->assertStringEndsWith('.pdf', $submission->attachment_name);
+        $this->assertTrue(Storage::disk('local')->exists($submission->attachment_path));
+        // le fichier n'est jamais dans le dossier public
+        $this->assertFalse(Storage::disk('public')->exists($submission->attachment_path));
+
+        $this->getJson('/api/admin/submissions/'.$submission->id.'/attachment')->assertUnauthorized();
+
+        $this->actingAs(User::factory()->create());
+        $this->get('/api/admin/submissions/'.$submission->id.'/attachment')->assertOk()->assertDownload();
+    }
+
+    public function test_quote_attachment_with_a_dangerous_type_is_rejected(): void
+    {
+        Mail::fake();
+        Storage::fake('local');
+
+        $this->post('/api/quote', [
+            'name' => 'Pirate', 'email' => 'pirate@example.test', 'message' => 'Un fichier piégé.',
+            'attachment' => UploadedFile::fake()->create('virus.php', 10, 'application/x-php'),
+        ], ['Accept' => 'application/json'])->assertUnprocessable()->assertJsonValidationErrors('attachment');
+
+        $this->assertSame(0, Submission::count());
+    }
+
+    public function test_deleting_a_submission_removes_its_attachment(): void
+    {
+        Storage::fake('local');
+        $this->actingAs(User::factory()->create());
+        Storage::disk('local')->put('submissions/x.pdf', 'contenu');
+        $s = Submission::create([
+            'type' => 'quote', 'name' => 'A', 'email' => 'a@example.test', 'message' => 'Bonjour',
+            'attachment_path' => 'submissions/x.pdf', 'attachment_name' => 'x.pdf',
+        ]);
+
+        $this->deleteJson('/api/admin/submissions/'.$s->id)->assertOk();
+
+        $this->assertFalse(Storage::disk('local')->exists('submissions/x.pdf'));
     }
 }

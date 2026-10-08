@@ -195,6 +195,16 @@ export default function SubmissionsPage() {
             <Row label="Service souhaité">{selected.service}</Row>
             <Row label="Budget estimatif">{selected.budget}</Row>
             <Row label="Date souhaitée">{selected.desired_date}</Row>
+            <Row label="Pièce jointe">
+              {selected.has_attachment && (
+                <a
+                  href={`/api/admin/submissions/${selected.id}/attachment`}
+                  className="font-medium text-blue-700 underline"
+                >
+                  {selected.attachment_name || 'Télécharger'}
+                </a>
+              )}
+            </Row>
             <Row label="Langue du site">{selected.lang?.toUpperCase()}</Row>
             <Row label="Message">
               <span className="whitespace-pre-line">{selected.message}</span>

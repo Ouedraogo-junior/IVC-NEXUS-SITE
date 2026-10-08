@@ -14,6 +14,7 @@
         @if($submission->service)<tr><td><strong>Service</strong></td><td>{{ $submission->service }}</td></tr>@endif
         @if($submission->budget)<tr><td><strong>Budget estimatif</strong></td><td>{{ $submission->budget }}</td></tr>@endif
         @if($submission->desired_date)<tr><td><strong>Date souhaitée</strong></td><td>{{ $submission->desired_date->format('d/m/Y') }}</td></tr>@endif
+        @if($submission->attachment_name)<tr><td><strong>Pièce jointe</strong></td><td>{{ $submission->attachment_name }} (à télécharger depuis l’espace d’administration)</td></tr>@endif
         <tr><td><strong>Langue du site</strong></td><td>{{ strtoupper($submission->lang) }}</td></tr>
     </table>
 

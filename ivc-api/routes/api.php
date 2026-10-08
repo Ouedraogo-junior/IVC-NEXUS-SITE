@@ -57,6 +57,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::apiResource('portfolio', AdminPortfolio::class)->parameters(['portfolio' => 'item']);
 
         Route::get('submissions/export', [AdminSubmission::class, 'export']);
+        Route::get('submissions/{submission}/attachment', [AdminSubmission::class, 'attachment']);
         Route::apiResource('submissions', AdminSubmission::class)->only(['index', 'show', 'update', 'destroy']);
 
         Route::get('settings', [AdminSetting::class, 'show']);
