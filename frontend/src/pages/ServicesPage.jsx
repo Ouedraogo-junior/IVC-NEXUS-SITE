@@ -11,7 +11,8 @@ import FaqList from '../components/FaqList'
 import Seo from '../components/Seo'
 import { servicesSlides } from '../data/heroSlides'
 import { serviceSlugs, serviceRelated } from '../data/serviceSlugs'
-import { portfolioItems } from '../data/portfolioItems'
+import { usePortfolio } from '../lib/usePortfolio'
+import { selectRelated } from '../lib/portfolioAdapter'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const VISUAL_GRADIENTS = [
@@ -64,6 +65,7 @@ export default function ServicesPage() {
   const { hash, pathname } = useLocation()
   const s = t.servicesSection
   const ab = t.abonnements // présent seulement si le fichier des tarifs est installé
+  const { items: portfolio } = usePortfolio()
 
   const faqItems = t.faqExtra
     ? [t.faqPage.items[0], ...t.faqExtra, ...t.faqPage.items.slice(1)]
@@ -117,12 +119,7 @@ export default function ServicesPage() {
             const slug = serviceSlugs[i]
             const [from, to] = VISUAL_GRADIENTS[i % VISUAL_GRADIENTS.length]
             const servicePricing = t.servicesPricing?.[slug]
-            const related = serviceRelated[i]
-            const relatedItems = related
-              ? portfolioItems
-                  .filter((p) => related.types?.includes(p.type) || related.sectors?.includes(p.sector))
-                  .slice(0, 3)
-              : []
+            const relatedItems = selectRelated(portfolio, serviceRelated[i])
 
             return (
               <div

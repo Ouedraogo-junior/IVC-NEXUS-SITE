@@ -26,10 +26,11 @@ export default function Home() {
       <PortfolioPreview />
       <Method />
       <WhyUs />
+      {/* Alimentés par l'API : ils se masquent d'eux-mêmes tant que rien n'est publié */}
+      <Stats />
+      <Testimonials />
       {SHOW_PLACEHOLDER_SECTIONS && (
         <>
-          <Stats />
-          <Testimonials />
           <Clients />
           <Partners />
         </>

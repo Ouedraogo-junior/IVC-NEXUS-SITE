@@ -1,12 +1,16 @@
 import SectionHeading from '../components/ui/SectionHeading'
 import PortfolioCard from '../components/PortfolioCard'
 import Button from '../components/ui/Button'
-import { portfolioItems } from '../data/portfolioItems'
 import { useLanguage } from '../i18n/LanguageContext'
+import { usePortfolio } from '../lib/usePortfolio'
 
 export default function PortfolioPreview() {
   const { t } = useLanguage()
-  const preview = portfolioItems.slice(0, 4)
+  const { items } = usePortfolio()
+  const preview = items.slice(0, 4)
+
+  // Pas encore de réalisation publiée (ou API indisponible) : la section n'apparaît pas.
+  if (preview.length === 0) return null
 
   return (
     <section className="py-20 lg:py-28 bg-white">
