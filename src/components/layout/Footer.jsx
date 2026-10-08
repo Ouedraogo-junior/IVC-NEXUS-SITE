@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail } from 'lucide-react'
 import { FacebookIcon, LinkedinIcon, InstagramIcon, TiktokIcon, YoutubeIcon  } from '../ui/SocialIcons'
 import { navLinks } from '../../data/navLinks'
 import { useLanguage } from '../../i18n/LanguageContext'
+import { CONTACT } from '../../config/contact'
 
 const socials = [
   { Icon: FacebookIcon, href: '#', name: 'Facebook' },
@@ -76,17 +77,15 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
                 <span>{t.footer.address}</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 shrink-0" />
-                <a href="tel:+22600000000" className="hover:text-white transition-colors">
-                  +226 00 00 00 00
-                </a>
-              </li>
+              {CONTACT.phones.map((phone) => (
+                <li key={phone.tel} className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <a href={`tel:${phone.tel}`} className="hover:text-white transition-colors">{phone.display}</a>
+                </li>
+              ))}
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0" />
-                <a href="mailto:contact@ivcnexus.example" className="hover:text-white transition-colors">
-                  contact@ivcnexus.example
-                </a>
+                <a href={`mailto:${CONTACT.email}`} className="hover:text-white transition-colors">{CONTACT.email}</a>
               </li>
             </ul>
           </div>

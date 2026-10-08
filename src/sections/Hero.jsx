@@ -36,11 +36,11 @@ export default function Hero() {
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 pt-24 pb-16 text-center lg:text-left w-full">
         <div className="max-w-3xl mx-auto lg:mx-0">
           <div
-            className="inline-flex items-center gap-2 mb-6 animate-fade-up rounded-full px-4 py-1.5"
+            className="inline-flex items-center gap-2 mb-6 animate-fade-up rounded-full px-4 py-1.5 max-w-full"
             style={{ background: 'rgba(255,107,0,.15)', border: '1px solid rgba(255,107,0,.4)' }}
           >
-            <span className="w-2 h-2 rounded-full bg-impact" />
-            <span className="text-xs font-semibold tracking-widest text-white/80 uppercase font-heading">
+            <span className="w-2 h-2 rounded-full bg-impact shrink-0" />
+            <span className="text-[10px] sm:text-xs font-semibold tracking-widest text-white/80 uppercase font-heading text-left">
               {t.hero.badge}
             </span>
           </div>
@@ -57,12 +57,16 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 animate-fade-up delay-800 opacity-0">
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-6 max-w-xl mx-auto lg:mx-0 animate-fade-up delay-800 opacity-0">
             {t.hero.subtitle}
           </p>
 
+          <p className="text-sm md:text-base font-heading font-bold tracking-widest uppercase text-impact mb-10 animate-fade-up delay-900 opacity-0">
+            {t.hero.method}
+          </p>
+
           <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start animate-fade-up delay-1000 opacity-0">
-            <Button to="/services" variant="primary" className="w-full sm:w-auto">
+            <Button to="/contact" variant="primary" className="w-full sm:w-auto">
               {t.hero.ctaPrimary}
             </Button>
             <Button to="/realisations" variant="outline" className="w-full sm:w-auto">
@@ -71,7 +75,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 animate-fade-in delay-600 opacity-0">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 animate-fade-in delay-1100 opacity-0">
           <span className="text-xs text-white/40 tracking-widest uppercase font-heading">{t.hero.scroll}</span>
           <div className="w-px h-12" style={{ background: 'linear-gradient(to bottom, rgba(255,107,0,.7), transparent)' }} />
         </div>

@@ -12,6 +12,7 @@ import { FacebookIcon, LinkedinIcon, InstagramIcon, TiktokIcon, YoutubeIcon } fr
 import Seo from '../components/Seo'
 import BookingWidget from '../components/BookingWidget'
 import { contactSlides } from '../data/heroSlides'
+import { CONTACT } from '../config/contact'
 
 function SuccessNote({ children }) {
   return (
@@ -139,12 +140,19 @@ export default function ContactPage() {
           <RevealBlock>
             <h3 className="text-sm font-bold uppercase tracking-widest text-impact mb-4">{c.coordinatesTitle}</h3>
             <ul className="flex flex-col gap-3 text-slateText text-sm">
-              <li className="flex items-center gap-2"><MapPin className="w-4 h-4 shrink-0" /> {t.footer.address}</li>
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 shrink-0" /> <a href="tel:+22600000000" className="hover:text-nexus">+226 00 00 00 00</a>
+                <MapPin className="w-4 h-4 shrink-0" /> 
+                {t.footer.address}
               </li>
+              {CONTACT.phones.map((phone) => (
+                <li key={phone.tel} className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <a href={`tel:${phone.tel}`} className="hover:text-nexus">{phone.display}</a>
+                </li>
+              ))}
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 shrink-0" /> <a href="mailto:contact@ivcnexus.example" className="hover:text-nexus">contact@ivcnexus.example</a>
+                <Mail className="w-4 h-4 shrink-0" />
+                <a href={`mailto:${CONTACT.email}`} className="hover:text-nexus">{CONTACT.email}</a>
               </li>
             </ul>
           </RevealBlock>

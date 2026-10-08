@@ -1,2 +1,9 @@
-// Ordre identique à `servicesSection.list` dans src/i18n/fr.json et en.json.
-export const serviceSlugs = ['audiovisuel', 'digital', 'graphique', 'impression', 'strategie']
+export const serviceSlugs = ['production', 'impact', 'evenementiel', 'studio', 'design']
+
+export const serviceRelated = [
+  { types: ['Vidéo', 'Photo'] },
+  { sectors: ['ONG', 'Institution'] },
+  { sectors: ['Événementiel'] },
+  null,
+  { types: ['Infographie', 'Impression'] },
+]

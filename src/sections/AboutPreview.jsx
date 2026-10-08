@@ -33,10 +33,12 @@ export default function AboutPreview() {
                 <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
               </svg>
             </div>
-            <div className="absolute -bottom-6 -left-6 rounded-xl px-6 py-4 shadow-xl bg-impact">
-              <div className="text-3xl font-black text-white">{t.aboutPreview.badgeNumber}</div>
-              <div className="text-xs text-white/80 font-semibold mt-0.5">{t.aboutPreview.badgeLabel}</div>
-            </div>
+            {t.aboutPreview.badgeNumber && (
+              <div className="absolute -bottom-6 -left-6 rounded-xl px-6 py-4 shadow-xl bg-impact">
+                <div className="text-3xl font-black text-white">{t.aboutPreview.badgeNumber}</div>
+                <div className="text-xs text-white/80 font-semibold mt-0.5">{t.aboutPreview.badgeLabel}</div>
+              </div>
+            )}
             <div className="absolute -top-4 -right-4 w-24 h-24 rounded-xl opacity-20 border-[3px] border-nexus" />
           </div>
         </div>

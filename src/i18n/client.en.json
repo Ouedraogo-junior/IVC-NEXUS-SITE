@@ -1,0 +1,569 @@
+{
+  "hero": {
+    "badge": "Audiovisual production & integrated communication",
+    "titleLine1": "Your image.",
+    "titleLine2": "Your impact.",
+    "titleLine3": "Your visibility.",
+    "subtitle": "IVC Nexus supports businesses, institutions, NGOs, projects, organizations, executives and brands in the design, production and promotion of their communications.",
+    "method": "Understand. Design. Produce. Leverage.",
+    "ctaPrimary": "Request a quote",
+    "ctaSecondary": "See our work",
+    "scroll": "Scroll"
+  },
+  "aboutPreview": {
+    "title1": "Who",
+    "title2": "are we?",
+    "text1": "Impact Vision Communication Nexus, better known as IVC Nexus, is a Burkinabè audiovisual production and integrated communication agency based in Ouagadougou.",
+    "text2": "From strategy to audiovisual production, we turn your needs into professional content designed to strengthen your image, your visibility and your credibility.",
+    "cta": "Learn more about us",
+    "badgeNumber": "",
+    "badgeLabel": ""
+  },
+  "whyUs": {
+    "title": "Why IVC Nexus?",
+    "subtitle": "",
+    "items": [
+      {
+        "icon": "Link2",
+        "title": "An integrated approach",
+        "description": "We bring several skills together around a single project to avoid fragmented communication."
+      },
+      {
+        "icon": "BarChart3",
+        "title": "A structured production",
+        "description": "The scope, deliverables, deadlines and terms are defined before work begins."
+      },
+      {
+        "icon": "Target",
+        "title": "Tailored solutions",
+        "description": "We don't impose the same setup on every client. The answer depends on the real need."
+      },
+      {
+        "icon": "CheckCircle2",
+        "title": "A focus on quality",
+        "description": "Every production undergoes a technical and editorial check before delivery."
+      },
+      {
+        "icon": "Handshake",
+        "title": "A long-term relationship",
+        "description": "Beyond one-off assignments, we develop solutions that help organizations structure their communication over time."
+      }
+    ]
+  },
+  "method": {
+    "title": "Our method",
+    "subtitle": "",
+    "steps": [
+      {
+        "title": "Understand",
+        "description": "We analyze your need, objectives, audience, context and expected results."
+      },
+      {
+        "title": "Design",
+        "description": "We define the message, concept, formats, production setup and schedule."
+      },
+      {
+        "title": "Produce",
+        "description": "Our teams create the agreed content in line with the brief and technical requirements."
+      },
+      {
+        "title": "Leverage",
+        "description": "We prepare the content for its use, distribution and archiving according to the project's needs."
+      }
+    ]
+  },
+  "ctaBand": {
+    "title": "Do you have a project?",
+    "subtitle": "Institutional film, digital communication, event, regular content, photography, podcast or impact communication: let's talk about your needs.",
+    "callBtn": "Call now",
+    "emailBtn": "Request a quote"
+  },
+  "aboutPage": {
+    "title": "Who are we?",
+    "eyebrow": "The agency",
+    "facts": [
+      { "icon": "MapPin", "label": "Ouagadougou, Burkina Faso" },
+      { "icon": "Video", "label": "Audiovisual production" },
+      { "icon": "Link2", "label": "Integrated communication" }
+    ],
+    "intro": [
+      "Impact Vision Communication Nexus, better known as IVC Nexus, is a Burkinabè audiovisual production and integrated communication agency based in Ouagadougou.",
+      "We support businesses, institutions, NGOs, projects, executives, experts and brands in designing and producing solutions that strengthen their image, visibility, credibility and impact.",
+      "Our ambition is not just to produce content. We seek to understand why a piece of content must be produced, who it is for and what it should achieve."
+    ],
+    "missionTitle": "Our mission",
+    "missionIntro": "Our mission is to help organizations communicate better in order to:",
+    "mission": [
+      "present their activities",
+      "promote their products and services",
+      "strengthen their image",
+      "document their projects",
+      "showcase their results",
+      "tell their stories",
+      "improve their visibility",
+      "demonstrate their impact"
+    ],
+    "visionTitle": "Our vision",
+    "visionIntro": "IVC Nexus aims to become a leading agency in Burkina Faso and, gradually, across the sub-region, recognized for:",
+    "vision": [
+      "the quality of its productions",
+      "its professionalism",
+      "its reliability",
+      "the relevance of its solutions",
+      "its ability to support complex projects",
+      "the quality of its relationships with partners"
+    ],
+    "approachTitle": "Our approach",
+    "showDetails": "Show details",
+    "hideDetails": "Hide details",
+    "approach": [
+      {
+        "title": "Understand",
+        "text": "Effective production starts with a good understanding of the need.",
+        "lead": "We notably identify:",
+        "items": ["the objective", "the audience", "the message", "the constraints", "the deadlines", "the expected results"]
+      },
+      {
+        "title": "Design",
+        "text": "We turn the need into a solution:",
+        "items": ["concept", "strategy", "script", "setup", "schedule", "formats"]
+      },
+      {
+        "title": "Produce",
+        "text": "We mobilize the resources needed to create the content."
+      },
+      {
+        "title": "Leverage",
+        "text": "We organize the deliverables so they can be used effectively on the relevant channels."
+      }
+    ],
+    "valuesTitle": "Our values",
+    "values": [
+      {
+        "title": "Professionalism",
+        "text": "We value preparation, organization and keeping our commitments."
+      },
+      {
+        "title": "Creativity",
+        "text": "Each project must keep its own personality and respond to its own context."
+      },
+      {
+        "title": "Reliability",
+        "text": "We aim to build lasting relationships based on trust."
+      },
+      {
+        "title": "Quality",
+        "text": "Our productions are checked before delivery."
+      },
+      {
+        "title": "Integrity",
+        "text": "We favor transparent relationships with our clients and partners."
+      },
+      {
+        "title": "Impact",
+        "text": "Great content is useful when it truly serves an objective."
+      }
+    ]
+  },
+  "seo": {
+    "home": {
+      "title": "IVC Nexus | Communication agency and audiovisual production in Ouagadougou",
+      "description": "IVC Nexus is an audiovisual production and integrated communication agency in Ouagadougou. Photo, video, corporate communication, NGOs, events, digital content and podcast."
+    },
+    "about": {
+      "title": "About IVC Nexus | Audiovisual agency in Burkina Faso",
+      "description": "Discover IVC Nexus: our story, mission, values and the sectors we support in Ouagadougou, Burkina Faso."
+    },
+    "services": {
+      "title": "Our services",
+      "description": "Audiovisual production, digital communication, graphic design, printing and communication strategy — discover our 5 areas of expertise."
+    },
+    "portfolio": {
+      "title": "Photo, video and communication portfolio | IVC Nexus",
+      "description": "Explore our video, photo, graphic design and print work, filterable by media type and industry."
+    },
+    "contact": {
+      "title": "Request a quote | IVC Nexus Ouagadougou",
+      "description": "Get in touch with IVC Nexus to discuss your project or request a free quote."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Tips and news from IVC Nexus on communication, audiovisual production and marketing."
+    }
+  },
+  "expertises": {
+    "title": "One agency, several areas of expertise",
+    "intro": [
+      "Your communication is more than a photograph, a video or a poster.",
+      "It must serve an objective.",
+      "That is why IVC Nexus combines several skills to build solutions tailored to your activity, your audiences and your ambitions."
+    ],
+    "listTitle": "Our know-how",
+    "items": [
+      {
+        "icon": "Lightbulb",
+        "title": "Consulting & strategy",
+        "description": "We help you clarify your objectives, your messages and your communication approach.",
+        "link": "/services"
+      },
+      {
+        "icon": "Video",
+        "title": "Audiovisual production",
+        "description": "Photography, video, interviews, institutional films, reports, aftermovies and digital content.",
+        "link": "/services#production"
+      },
+      {
+        "icon": "Palette",
+        "title": "Graphic design",
+        "description": "Posters, visual campaigns, communication materials, brochures and social media content.",
+        "link": "/services#design"
+      },
+      {
+        "icon": "Mic",
+        "title": "Podcast & audio",
+        "description": "Audio production, video podcasts, multi-camera, voice-over and digital clips.",
+        "link": "/services#studio"
+      },
+      {
+        "icon": "HeartPulse",
+        "title": "Impact communication",
+        "description": "Capitalization, testimonials, stories of change and productions for NGOs, projects and institutions.",
+        "link": "/services#impact"
+      },
+      {
+        "icon": "PartyPopper",
+        "title": "Event communication",
+        "description": "Coverage planned before, during and after your event.",
+        "link": "/services#evenementiel"
+      }
+    ]
+  },
+  "solutions": {
+    "title": "Our solutions",
+    "items": [
+      {
+        "icon": "Building2",
+        "name": "IVCN Corporate",
+        "tagline": "Strengthen your company's image",
+        "text": "IVCN Corporate supports businesses, executives, firms and professional organizations in building a consistent, credible and professional image.",
+        "lead": "We can notably produce:",
+        "items": [
+          "professional portraits",
+          "corporate photography",
+          "presentation videos",
+          "executive interviews",
+          "brand content",
+          "image libraries",
+          "graphic designs",
+          "digital content"
+        ],
+        "cta": "Discover IVCN Corporate",
+        "link": "/services#production"
+      },
+      {
+        "icon": "HeartPulse",
+        "name": "IVCN Impact",
+        "tagline": "Make your actions and results visible",
+        "text": "IVCN Impact is dedicated to NGOs, projects, programs, institutions and organizations that want to document and showcase their activities, their results and the changes generated in the field.",
+        "lead": "We can produce:",
+        "items": [
+          "impact films",
+          "capitalization films",
+          "field reports",
+          "testimonials",
+          "stories of change",
+          "interviews",
+          "documentary photography",
+          "image libraries",
+          "awareness content"
+        ],
+        "cta": "Discover IVCN Impact",
+        "link": "/services#impact"
+      },
+      {
+        "icon": "PartyPopper",
+        "name": "IVCN Events Premium",
+        "tagline": "Showcase your event before, during and after",
+        "text": "An event is not limited to the day it takes place. IVC Nexus can support the entire communication cycle:",
+        "phases": [
+          { "label": "Before", "text": "visuals, teasers, announcement content and promotional materials." },
+          { "label": "During", "text": "photography, video, interviews and recording." },
+          { "label": "After", "text": "aftermovie, gallery, testimonials and social media content." }
+        ],
+        "cta": "Discover our event offer",
+        "link": "/services#evenementiel"
+      },
+      {
+        "icon": "CalendarDays",
+        "name": "Content Partner",
+        "tagline": "Produce professional content on a regular basis",
+        "text": "Do you need to communicate every month? IVC Nexus can become your regular partner for producing and organizing your content. Photography, video, graphic design, writing, scheduling and follow-up can be combined depending on the level of support you choose.",
+        "cta": "Request a quote",
+        "link": "/contact",
+        "pricingCta": "See our subscriptions",
+        "pricingLink": "/services#abonnements"
+      }
+    ]
+  },
+  "servicesSection": {
+    "title": "Our services",
+    "subtitle": "Every organization has its own communication challenges. IVC Nexus builds its work around the client's needs rather than around a simple technical catalog.",
+    "quoteButton": "Request a quote",
+    "bookButton": "Book a meeting",
+    "relatedTitle": "Related work",
+    "audiencesTitle": "Solutions tailored to your needs",
+    "audiences": [
+      {
+        "eyebrow": "For businesses",
+        "name": "IVCN Corporate",
+        "text": "We help businesses strengthen their professional image and better present their activities.",
+        "listLabel": "Possible solutions:",
+        "items": [
+          "corporate photography",
+          "portraits",
+          "company film",
+          "interview",
+          "product content",
+          "digital content",
+          "graphic design",
+          "monthly communication"
+        ],
+        "cta": "Present my need"
+      },
+      {
+        "eyebrow": "For NGOs, projects and institutions",
+        "name": "IVCN Impact",
+        "text": "We help organizations document and showcase their actions.",
+        "listLabel": "Possible solutions:",
+        "items": [
+          "capitalization film",
+          "field report",
+          "testimonials",
+          "stories of change",
+          "institutional film",
+          "institutional photography",
+          "image library",
+          "awareness content"
+        ],
+        "cta": "Talk about my project"
+      },
+      {
+        "eyebrow": "For events",
+        "name": "IVCN Events Premium",
+        "text": "We support you in creating consistent communication around your event.",
+        "listLabel": "Possible solutions:",
+        "items": [
+          "posters",
+          "teasers",
+          "photography",
+          "video",
+          "interviews",
+          "recording",
+          "aftermovie",
+          "gallery",
+          "social media content"
+        ],
+        "cta": "Prepare my event"
+      },
+      {
+        "eyebrow": "For brands and shops",
+        "text": "We produce content that showcases your products, your business and your customer experience.",
+        "listLabel": "Possible services:",
+        "items": [
+          "product photography",
+          "e-commerce",
+          "short videos",
+          "visual campaigns",
+          "graphic designs",
+          "digital content"
+        ]
+      },
+      {
+        "eyebrow": "For executives and experts",
+        "text": "We also support professionals who want to develop their personal image or visibility.",
+        "listLabel": "Possible services:",
+        "items": [
+          "professional portrait",
+          "interview",
+          "podcast",
+          "presentation video",
+          "expertise content",
+          "visual personal branding"
+        ]
+      }
+    ],
+    "list": [
+      {
+        "icon": "Video",
+        "title": "Audiovisual production",
+        "tagline": "Give your activities a professional image",
+        "intro": "Photography and video are the historic core of IVC Nexus's expertise. We create content for businesses, institutions, projects, events and brands.",
+        "groups": [
+          {
+            "id": "photo",
+            "title": "Photography",
+            "lead": "We notably produce:",
+            "items": [
+              "professional portraits",
+              "corporate photography",
+              "institutional photography",
+              "event photography",
+              "product photography",
+              "e-commerce photography",
+              "field reportage",
+              "image libraries"
+            ]
+          },
+          {
+            "id": "video",
+            "title": "Video",
+            "lead": "We notably produce:",
+            "items": [
+              "promotional videos",
+              "interviews",
+              "vertical content",
+              "institutional films",
+              "aftermovies",
+              "reports",
+              "capitalization films",
+              "digital content"
+            ]
+          }
+        ]
+      },
+      {
+        "icon": "HeartPulse",
+        "title": "Impact & institutional",
+        "tagline": "Communicate about your actions, your results and your impact",
+        "intro": "NGOs, projects, institutions and programs often have significant results that remain insufficiently documented or showcased. IVCN Impact turns field experience into professional content tailored to partners, beneficiaries, decision-makers and audiences.",
+        "groups": [
+          {
+            "id": "capitalisation",
+            "title": "Capitalization films",
+            "text": "We document a project's experiences, methods, results and lessons learned to produce lasting, usable content."
+          },
+          {
+            "id": "histoires",
+            "title": "Stories of change",
+            "text": "We can document beneficiaries' journeys and the transformations produced by the project's interventions.",
+            "lead": "Possible formats:",
+            "items": ["video", "photo reportage", "interview", "written and visual testimonial"]
+          },
+          {
+            "id": "banques",
+            "title": "Image libraries",
+            "text": "We produce photographs and video footage designed to supply the organization's future communications."
+          }
+        ]
+      },
+      {
+        "icon": "PartyPopper",
+        "title": "Events",
+        "tagline": "Your event deserves more than simple coverage",
+        "intro": "IVC Nexus approaches event coverage as a communication plan.",
+        "groups": [
+          {
+            "id": "avant",
+            "title": "Before",
+            "lead": "We can produce:",
+            "items": ["visuals", "posters", "teasers", "announcement videos", "promotional materials"]
+          },
+          {
+            "id": "pendant",
+            "title": "During",
+            "lead": "We can provide:",
+            "items": ["photography", "video", "interviews", "recording", "short content"]
+          },
+          {
+            "id": "apres",
+            "title": "After",
+            "lead": "We can deliver:",
+            "items": ["photo gallery", "aftermovie", "clips", "testimonials", "social media content"]
+          }
+        ]
+      },
+      {
+        "icon": "Mic",
+        "title": "Studio, podcast & expertise",
+        "tagline": "Your voice, your expertise, your image",
+        "intro": "IVC Nexus supports businesses, executives, experts and creators in producing content designed to share their ideas and expertise.",
+        "groups": [
+          {
+            "id": "audio",
+            "title": "Audio podcast",
+            "text": "Recording and mixing."
+          },
+          {
+            "id": "video",
+            "title": "Video podcast",
+            "items": ["one camera", "multi-camera", "4-episode series"]
+          },
+          {
+            "id": "extraits",
+            "title": "Vertical clips",
+            "text": "Turn your long episodes into short content for social media."
+          }
+        ]
+      },
+      {
+        "icon": "Palette",
+        "title": "Design & visibility",
+        "tagline": "Bring consistency to your visual communication",
+        "intro": "IVC Nexus creates the materials needed for your campaigns, events, products and activities.",
+        "groups": [
+          {
+            "id": "graphique",
+            "title": "Graphic design",
+            "items": ["posters", "campaign visuals", "flyers", "brochures"]
+          },
+          {
+            "id": "produits",
+            "title": "Products",
+            "items": ["product photography", "e-commerce pack", "premium product / staged shoot"]
+          },
+          {
+            "id": "impression",
+            "title": "Printing",
+            "lead": "Physical materials such as:",
+            "items": ["cards", "roll-up banners", "large-format banners", "brochures", "posters", "promotional materials"],
+            "after": "can be coordinated depending on the project."
+          }
+        ]
+      }
+    ]
+  },
+  "faqPage": {
+    "title": "Frequently asked questions",
+    "subtitle": "",
+    "items": [
+      {
+        "q": "How do I request a quote?",
+        "a": "Send us the main details of your project: objective, type of need, date, location, deliverables, deadline and indicative budget when available. This lets us offer you a more precise answer."
+      },
+      {
+        "q": "Do you work outside Ouagadougou?",
+        "a": "Yes. We can work in other locations depending on the project. Transport, accommodation, meals, security and logistics costs are included in the quote when necessary."
+      },
+      {
+        "q": "How many rounds of corrections are included?",
+        "a": "The number depends on the service. A round of corrections means a single, consolidated written feedback. Major changes to the original brief may be subject to an additional quote."
+      },
+      {
+        "q": "Do you hand over rushes and RAW files?",
+        "a": "They are not included automatically. Handing them over can be provided for in the quote when possible."
+      },
+      {
+        "q": "Can you manage our social media?",
+        "a": "Yes, depending on the level of support chosen. Scheduling may be included in some packs. Ongoing moderation, message handling or intensive community management must be specifically planned."
+      },
+      {
+        "q": "Can you sponsor our posts?",
+        "a": "Yes, when an assignment provides for it. The media budget paid to the platforms remains separate from IVC Nexus's fees."
+      },
+      {
+        "q": "What lead time should we plan for?",
+        "a": "The lead time depends on the type of production, the volume, the number of locations, approvals and the level of post-production. Timelines are set out in the quote or project schedule."
+      }
+    ]
+  }
+}

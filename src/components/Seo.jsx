@@ -5,7 +5,7 @@ import { SITE_URL, SITE_NAME } from '../config/site'
 export default function Seo({ title, description, image, type = 'website' }) {
   const { pathname } = useLocation()
   const url = `${SITE_URL}${pathname}`
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME
+  const fullTitle = title ? (title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`) : SITE_NAME
   const ogImage = image || `${SITE_URL}/og-image.png`
 
   return (

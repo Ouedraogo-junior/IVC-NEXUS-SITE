@@ -1,6 +1,7 @@
 import Button from '../components/ui/Button'
-import { useLanguage } from '../i18n/LanguageContext'
 import { Phone, Mail } from 'lucide-react'
+import { useLanguage } from '../i18n/LanguageContext'
+import { CONTACT } from '../config/contact'
 
 export default function CTABand() {
   const { t } = useLanguage()
@@ -12,18 +13,15 @@ export default function CTABand() {
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 text-center">
         <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">{t.ctaBand.title}</h2>
-        <p className="text-lg text-white/80 mb-10 max-w-xl mx-auto">{t.ctaBand.subtitle}</p>
+        <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">{t.ctaBand.subtitle}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href="tel:+22600000000" variant="white">
-            <Phone className="w-4 h-4" />
-            {t.ctaBand.callBtn}
+          <Button href={`tel:${CONTACT.phones[0].tel}`} variant="white">
+            <Phone className="w-4 h-4" /> {t.ctaBand.callBtn}
           </Button>
           <Button to="/contact" className="!bg-nexus hover:!bg-nexus-mid">
-            <Mail className="w-4 h-4" />
-            {t.ctaBand.emailBtn}
+            <Mail className="w-4 h-4" /> {t.ctaBand.emailBtn}
           </Button>
         </div>
-        <p className="text-xs text-white/60 mt-6">{t.ctaBand.disclaimer}</p>
       </div>
     </section>
   )
