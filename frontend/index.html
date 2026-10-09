@@ -51,53 +51,6 @@
   <body>
     <div id="root"></div>
 
-    <!--
-      Formulaires statiques "fantômes" pour Netlify Forms.
-      Netlify détecte les formulaires au moment du build en analysant le HTML statique.
-      Comme nos vrais formulaires sont rendus par React (donc absents du HTML au build),
-      on duplique ici leur structure exacte, cachée, pour que Netlify les enregistre.
-      Ne pas supprimer  voir README.md, section "Formulaires Netlify".
-    -->
-    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="text" name="nom" />
-      <input type="email" name="email" />
-      <input type="tel" name="telephone" />
-      <input type="text" name="organisation" />
-      <textarea name="message"></textarea>
-    </form>
-
-    <form name="devis" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
-      <input type="text" name="service" />
-      <input type="text" name="date_souhaitee" />
-      <input type="text" name="budget" />
-      <textarea name="description"></textarea>
-      <input type="file" name="piece_jointe" />
-      <input type="text" name="nom" />
-      <input type="email" name="email" />
-      <input type="tel" name="telephone" />
-    </form>
-
-    <!--
-      Netlify Identity  nécessaire ICI (pas seulement dans /admin) car les
-      liens d'invitation/confirmation/récupération de mot de passe reçus par
-      e-mail redirigent vers la racine du site. Sans ce script sur cette
-      page, le jeton contenu dans l'URL (#confirmation_token=...) n'est
-      intercepté par personne et la fenêtre "définir un mot de passe" ne
-      s'ouvre jamais.
-    -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', (user) => {
-          if (!user) {
-            window.netlifyIdentity.on('login', () => {
-              document.location.href = '/admin/'
-            })
-          }
-        })
-      }
-    </script>
-
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

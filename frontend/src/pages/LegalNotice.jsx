@@ -17,8 +17,8 @@ export default function LegalNotice() {
           </p>
           <p>
             {isFr
-              ? 'Hébergement : Netlify, Inc.'
-              : 'Hosting: Netlify, Inc.'}
+              ? 'Hébergement : LWS (Ligne Web Services)'
+              : 'Hosting: LWS (Ligne Web Services)'}
           </p>
         </div>
       </section>
