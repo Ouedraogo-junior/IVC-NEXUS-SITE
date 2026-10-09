@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound'
 import CaseStudyPage from './pages/CaseStudyPage'
 import BlogPage from './pages/BlogPage'
 import BlogPostPage from './pages/BlogPostPage'
+import PageTracker from './components/PageTracker'
 
 // Chargé à la demande : l'éditeur de texte ne pèse pas sur le site public
 const AdminApp = lazy(() => import('./admin/AdminApp'))
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <PageTracker />
       <Routes>
         {/* Espace d'administration : hors de la mise en page publique (sans en-tête ni pied de page) */}
         <Route

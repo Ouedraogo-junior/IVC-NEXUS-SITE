@@ -13,6 +13,7 @@ import TestimonialsPage from './pages/TestimonialsPage'
 import StatsPage from './pages/StatsPage'
 import SubmissionsPage from './pages/SubmissionsPage'
 import SettingsPage from './pages/SettingsPage'
+import AnalyticsPage from './pages/AnalyticsPage'
 
 /**
  * Point d'entrée de l'espace d'administration.
@@ -41,6 +42,7 @@ export default function AdminApp() {
             <Route path="realisations/:id" element={<PortfolioEdit />} />
             <Route path="temoignages" element={<TestimonialsPage />} />
             <Route path="chiffres" element={<StatsPage />} />
+            <Route path="frequentation" element={<AnalyticsPage />} />
             <Route path="reglages" element={<SettingsPage />} />
           </Route>
           <Route path="*" element={<Navigate to={ADMIN_BASE} replace />} />

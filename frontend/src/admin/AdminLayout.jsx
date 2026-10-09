@@ -11,6 +11,7 @@ const NAV = [
   { to: `${ADMIN_BASE}/articles`, label: 'Articles du blog' },
   { to: `${ADMIN_BASE}/realisations`, label: 'Réalisations' },
   { to: `${ADMIN_BASE}/temoignages`, label: 'Témoignages' },
+  { to: `${ADMIN_BASE}/frequentation`, label: 'Fréquentation' },
   { to: `${ADMIN_BASE}/chiffres`, label: 'Chiffres clés' },
   { to: `${ADMIN_BASE}/reglages`, label: 'Coordonnées' },
 ]

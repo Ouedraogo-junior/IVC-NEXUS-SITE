@@ -20,5 +20,12 @@ return [
     // Champs textuels d'une réalisation (une version FR et une version EN).
     'portfolio_fields' => ['title', 'summary', 'context', 'need', 'solution', 'result'],
 
+    // Pages comptées par le compteur de visites (chemins exacts). Les articles (/blog/xxx) et les
+    // réalisations (/realisations/xxx) publiés sont reconnus automatiquement. Ajouter ici toute nouvelle page.
+    'tracked_pages' => [
+        '/', '/a-propos', '/services', '/realisations', '/blog', '/contact',
+        '/faq', '/secteurs', '/telechargements', '/mentions-legales', '/confidentialite',
+    ],
+
     'upload_max_kb' => 8192,
 ];

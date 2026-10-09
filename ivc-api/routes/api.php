@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Admin\AnalyticsController;
 use App\Http\Controllers\Api\Admin\PortfolioController as AdminPortfolio;
 use App\Http\Controllers\Api\Admin\PostController as AdminPost;
 use App\Http\Controllers\Api\Admin\SettingController as AdminSetting;
@@ -11,7 +12,9 @@ use App\Http\Controllers\Api\Admin\UploadController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\PublicController;
 use App\Http\Controllers\Api\SubmissionController;
+use App\Http\Controllers\Api\TrackController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +35,11 @@ Route::middleware('throttle:6,1')->group(function () {
     Route::post('/quote', [SubmissionController::class, 'quote']);
 });
 
+// Compteur de visites : volontairement SANS session ni cookie (pas de connexion « stateful »)
+Route::post('/track', [TrackController::class, 'store'])
+    ->withoutMiddleware(EnsureFrontendRequestsAreStateful::class)
+    ->middleware('throttle:120,1');
+
 /*
 |--------------------------------------------------------------------------
 | Authentification de l'espace d'administration
@@ -50,6 +58,7 @@ Route::middleware('auth:sanctum')->group(function () {
     */
     Route::prefix('admin')->group(function () {
         Route::get('summary', SummaryController::class);
+        Route::get('analytics', AnalyticsController::class);
 
         Route::apiResource('posts', AdminPost::class);
         Route::apiResource('testimonials', AdminTestimonial::class);
