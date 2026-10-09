@@ -1,10 +1,11 @@
 import Button from '../components/ui/Button'
 import { Phone, Mail } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
-import { CONTACT } from '../config/contact'
+import { useSiteSettings } from '../lib/siteSettings'
 
 export default function CTABand() {
   const { t } = useLanguage()
+  const contact = useSiteSettings()
 
   return (
     <section className="py-20 lg:py-24 relative overflow-hidden bg-impact">
@@ -15,7 +16,7 @@ export default function CTABand() {
         <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">{t.ctaBand.title}</h2>
         <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">{t.ctaBand.subtitle}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href={`tel:${CONTACT.phones[0].tel}`} variant="white">
+          <Button href={`tel:${contact.phones[0].tel}`} variant="white">
             <Phone className="w-4 h-4" /> {t.ctaBand.callBtn}
           </Button>
           <Button to="/contact" className="!bg-nexus hover:!bg-nexus-mid">

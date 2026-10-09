@@ -8,11 +8,11 @@ import { serviceSlugs } from '../data/serviceSlugs'
 import { useLanguage } from '../i18n/LanguageContext'
 import { api } from '../lib/api'
 import { MapPin, Phone, Mail } from 'lucide-react'
-import { FacebookIcon, LinkedinIcon, InstagramIcon, TiktokIcon, YoutubeIcon } from '../components/ui/SocialIcons'
+import SocialLinks from '../components/ui/SocialLinks'
 import Seo from '../components/Seo'
 import BookingWidget from '../components/BookingWidget'
 import { contactSlides } from '../data/heroSlides'
-import { CONTACT } from '../config/contact'
+import { useSiteSettings } from '../lib/siteSettings'
 
 function SuccessNote({ children }) {
   return (
@@ -195,9 +195,9 @@ export default function ContactPage() {
             <ul className="flex flex-col gap-3 text-slateText text-sm">
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 shrink-0" />
-                {t.footer.address}
+                {contactInfo.address || t.footer.address}
               </li>
-              {CONTACT.phones.map((phone) => (
+              {contactInfo.phones.map((phone) => (
                 <li key={phone.tel} className="flex items-center gap-2">
                   <Phone className="w-4 h-4 shrink-0" />
                   <a href={`tel:${phone.tel}`} className="hover:text-nexus">
@@ -207,33 +207,18 @@ export default function ContactPage() {
               ))}
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0" />
-                <a href={`mailto:${CONTACT.email}`} className="hover:text-nexus">
-                  {CONTACT.email}
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-nexus">
+                  {contactInfo.email}
                 </a>
               </li>
             </ul>
           </RevealBlock>
-          <RevealBlock delay={100}>
-            <h3 className="text-sm font-bold uppercase tracking-widest text-impact mb-4">{c.socialsTitle}</h3>
-            <div className="flex gap-3">
-              {[
-                { Icon: FacebookIcon, name: 'Facebook' },
-                { Icon: LinkedinIcon, name: 'LinkedIn' },
-                { Icon: InstagramIcon, name: 'Instagram' },
-                { Icon: TiktokIcon, name: 'TikTok' },
-                { Icon: YoutubeIcon, name: 'YouTube' },
-              ].map(({ Icon, name }) => (
-                <a
-                  key={name}
-                  href="#"
-                  aria-label={name}
-                  className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-nexus shadow-sm hover:-translate-y-0.5 transition-transform"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
-            </div>
-          </RevealBlock>
+          {contactInfo.socials.length > 0 && (
+            <RevealBlock delay={100}>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-impact mb-4">{c.socialsTitle}</h3>
+              <SocialLinks socials={contactInfo.socials} variant="light" />
+            </RevealBlock>
+          )}
           <RevealBlock delay={200} variant="reveal-scale" className="rounded-xl overflow-hidden h-48 sm:h-auto">
             <iframe
               title="Localisation IVC Nexus"

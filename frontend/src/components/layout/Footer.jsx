@@ -1,27 +1,15 @@
 import { Link } from 'react-router-dom'
 import LogoChip from '../ui/LogoChip'
 import { MapPin, Phone, Mail } from 'lucide-react'
-import { FacebookIcon, LinkedinIcon, InstagramIcon, TiktokIcon, YoutubeIcon  } from '../ui/SocialIcons'
+import SocialLinks from '../ui/SocialLinks'
 import { navLinks } from '../../data/navLinks'
 import { useLanguage } from '../../i18n/LanguageContext'
-import { CONTACT } from '../../config/contact'
-
-const socials = [
-  { Icon: FacebookIcon, href: '#', name: 'Facebook' },
-  { Icon: LinkedinIcon, href: '#', name: 'LinkedIn' },
-  { Icon: InstagramIcon, href: '#', name: 'Instagram' },
-  { Icon: TiktokIcon, href: '#', name: 'TikTok' },
-  { Icon: YoutubeIcon, href: '#', name: 'YouTube' },
-]
+import { useSiteSettings } from '../../lib/siteSettings'
 
 export default function Footer() {
   const { t } = useLanguage()
+  const contact = useSiteSettings()
   const services = t.servicesSection.list
-  const resources = [
-    { to: '/secteurs', label: t.sectorsPage.title },
-    { to: '/faq', label: t.faqPage.title },
-    { to: '/telechargements', label: t.downloadsPage.title },
-  ]
 
   return (
     <footer className="bg-nexus-dark py-14 lg:py-16">
@@ -30,18 +18,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <LogoChip />
             <p className="mt-4 text-sm leading-relaxed text-white/50">{t.footer.tagline}</p>
-            <div className="flex gap-3 mt-5">
-              {socials.map(({ Icon, href, name }) => (
-                <a
-                  key={name}
-                  href={href}
-                  aria-label={name}
-                  className="w-9 h-9 rounded-full flex items-center justify-center bg-white/10 text-white/70 transition-transform duration-200 hover:-translate-y-0.5 hover:text-white"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
-            </div>
+            <SocialLinks socials={contact.socials} className="flex gap-3 mt-5" />
           </div>
 
           <div>
@@ -75,9 +52,9 @@ export default function Footer() {
             <ul className="flex flex-col gap-3 text-sm text-white/50">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
-                <span>{t.footer.address}</span>
+                <span>{contact.address || t.footer.address}</span>
               </li>
-              {CONTACT.phones.map((phone) => (
+              {contact.phones.map((phone) => (
                 <li key={phone.tel} className="flex items-center gap-2">
                   <Phone className="w-4 h-4 shrink-0" />
                   <a href={`tel:${phone.tel}`} className="hover:text-white transition-colors">{phone.display}</a>
@@ -85,7 +62,7 @@ export default function Footer() {
               ))}
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0" />
-                <a href={`mailto:${CONTACT.email}`} className="hover:text-white transition-colors">{CONTACT.email}</a>
+                <a href={`mailto:${contact.email}`} className="hover:text-white transition-colors">{contact.email}</a>
               </li>
             </ul>
           </div>
