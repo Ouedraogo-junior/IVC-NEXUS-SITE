@@ -96,6 +96,7 @@ export default function ContactPage() {
   const [searchParams] = useSearchParams()
   const c = t.contactPage
   const sending = (MESSAGES[lang] || MESSAGES.fr).sending
+  const contactInfo = useSiteSettings()
 
   const preselectedService = searchParams.get('service') || serviceSlugs[0]
 

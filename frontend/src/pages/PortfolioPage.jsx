@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useId, useMemo, useState } from 'react'
 import PageHeader from '../components/PageHeader'
 import PortfolioCard from '../components/PortfolioCard'
 import { mediaTypes, sectorTypes } from '../data/portfolioItems'
@@ -13,30 +13,46 @@ const MESSAGES = {
     loading: 'Chargement des réalisations…',
     error: 'Impossible de charger les réalisations pour le moment. Merci de réessayer un peu plus tard.',
     empty: 'Nos réalisations seront bientôt en ligne.',
-    noMatch: 'Aucune réalisation ne correspond à ce filtre.',
+    noMatch: 'Aucune réalisation ne correspond à ces filtres.',
+    mediaLabel: 'Type de réalisation',
+    sectorLabel: 'Secteur',
+    reset: 'Réinitialiser les filtres',
+    count: (n) => `${n} réalisation${n > 1 ? 's' : ''}`,
   },
   en: {
     loading: 'Loading our work…',
     error: 'We could not load our work right now. Please try again later.',
     empty: 'Our work will be online soon.',
-    noMatch: 'No project matches this filter.',
+    noMatch: 'No project matches these filters.',
+    mediaLabel: 'Type of work',
+    sectorLabel: 'Sector',
+    reset: 'Reset filters',
+    count: (n) => `${n} project${n > 1 ? 's' : ''}`,
   },
 }
 
-function FilterGroup({ options, active, onSelect, labels }) {
+function FilterGroup({ label, options, active, onSelect, labels }) {
+  const id = useId()
   return (
-    <div className="flex flex-wrap justify-center gap-2">
-      {options.map((option) => (
-        <button
-          key={option}
-          onClick={() => onSelect(option)}
-          className={`px-4 py-2 rounded-full text-sm font-heading font-bold transition-all ${
-            active === option ? 'bg-impact text-white scale-105' : 'bg-sectionbg text-slateText hover:bg-nexus/5'
-          }`}
-        >
-          {labels[option] ?? option}
-        </button>
-      ))}
+    <div role="group" aria-labelledby={id} className="flex flex-col gap-2 md:flex-row md:items-center md:gap-6">
+      <p id={id} className="md:w-44 shrink-0 text-xs font-heading font-bold uppercase tracking-wider text-nexus">
+        {label}
+      </p>
+      <div className="flex flex-wrap gap-2">
+        {options.map((option) => (
+          <button
+            key={option}
+            type="button"
+            aria-pressed={active === option}
+            onClick={() => onSelect(option)}
+            className={`px-4 py-2 rounded-full text-sm font-heading font-bold transition-all ${
+              active === option ? 'bg-impact text-white' : 'bg-sectionbg text-slateText hover:bg-nexus/5'
+            }`}
+          >
+            {labels[option] ?? option}
+          </button>
+        ))}
+      </div>
     </div>
   )
 }
@@ -61,6 +77,12 @@ export default function PortfolioPage() {
       ),
     [items, mediaFilter, sectorFilter]
   )
+
+  const filtersActive = mediaFilter !== mediaTypes[0] || sectorFilter !== sectorTypes[0]
+  const resetFilters = () => {
+    setMediaFilter(mediaTypes[0])
+    setSectorFilter(sectorTypes[0])
+  }
 
   let body
   if (loading) {
@@ -97,12 +119,35 @@ export default function PortfolioPage() {
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           {(mediaOptions.length > 1 || sectorOptions.length > 1) && (
-            <div className="flex flex-col gap-4 mb-10">
+            <div className="mb-10 rounded-2xl border border-gray-200 bg-white px-5 py-5 md:px-6">
               {mediaOptions.length > 1 && (
-                <FilterGroup options={mediaOptions} active={mediaFilter} onSelect={setMediaFilter} labels={t.portfolioSection.filters} />
+                <FilterGroup
+                  label={m.mediaLabel}
+                  options={mediaOptions}
+                  active={mediaFilter}
+                  onSelect={setMediaFilter}
+                  labels={t.portfolioSection.filters}
+                />
               )}
+              {mediaOptions.length > 1 && sectorOptions.length > 1 && <hr className="my-4 border-gray-200" />}
               {sectorOptions.length > 1 && (
-                <FilterGroup options={sectorOptions} active={sectorFilter} onSelect={setSectorFilter} labels={t.portfolioSection.sectorFilters} />
+                <FilterGroup
+                  label={m.sectorLabel}
+                  options={sectorOptions}
+                  active={sectorFilter}
+                  onSelect={setSectorFilter}
+                  labels={t.portfolioSection.sectorFilters}
+                />
+              )}
+              {!loading && !error && items.length > 0 && (
+                <div className="mt-4 flex items-center justify-between gap-4 border-t border-gray-200 pt-4 text-sm text-slateText">
+                  <span role="status">{m.count(filtered.length)}</span>
+                  {filtersActive && (
+                    <button type="button" onClick={resetFilters} className="font-heading font-bold text-impact hover:underline">
+                      {m.reset}
+                    </button>
+                  )}
+                </div>
               )}
             </div>
           )}

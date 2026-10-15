@@ -19,7 +19,7 @@ export default function Method() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28 bg-sectionbg">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         <SectionHeading title={t.method.title} subtitle={t.method.subtitle} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6">

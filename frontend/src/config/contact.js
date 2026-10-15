@@ -5,5 +5,5 @@ export const CONTACT = {
   ],
   // Le client précise que l'e-mail est "à harmoniser avec l'adresse
   // professionnelle définitivement retenue" : à remplacer ici dès le choix fait.
-  email: 'ivcnexus@gmail.com',
+  email: 'contact@ivcnexus.com',
 }

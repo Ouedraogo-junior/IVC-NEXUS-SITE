@@ -1,0 +1,23 @@
+# Site IVC Nexus : pages React (fichiers statiques) + API Laravel (/api et /sanctum)
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Transmet à Laravel l'en-tête d'autorisation et le jeton CSRF
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteCond %{HTTP:X-XSRF-Token} .
+    RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
+
+    # L'API et la connexion passent par Laravel
+    RewriteRule ^(api|sanctum)(/|$) laravel.php [L]
+
+    # Les fichiers qui existent (assets, images, storage…) sont servis tels quels
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # Toute autre adresse : le site React affiche la page (accueil, /blog/…, /admin/…)
+    RewriteRule ^ index.html [L]
+</IfModule>
