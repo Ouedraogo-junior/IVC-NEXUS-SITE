@@ -1,0 +1,34 @@
+<IfModule mod_negotiation.c>
+    Options -MultiViews -Indexes
+</IfModule>
+
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Forcer HTTPS
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # 2. Interdire l'accès aux fichiers cachés (sauf .well-known)
+    RewriteRule (^|/)\.(?!well-known) - [F]
+
+    # 3. Transmettre l'en-tête Authorization et le jeton XSRF à Laravel
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteCond %{HTTP:X-XSRF-Token} .
+    RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
+
+    # 4. /api et /sanctum -> Laravel
+    RewriteRule ^(api|sanctum)(/|$) laravel.php [L]
+
+    # 5. Fichiers et dossiers existants servis tels quels
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # 6. Tout le reste -> application React
+    RewriteRule ^ index.html [L]
+</IfModule>
