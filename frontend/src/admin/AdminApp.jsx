@@ -14,6 +14,7 @@ import StatsPage from './pages/StatsPage'
 import SubmissionsPage from './pages/SubmissionsPage'
 import SettingsPage from './pages/SettingsPage'
 import AnalyticsPage from './pages/AnalyticsPage'
+import AccountPage from './pages/AccountPage'
 
 /**
  * Point d'entrée de l'espace d'administration.
@@ -44,6 +45,7 @@ export default function AdminApp() {
             <Route path="chiffres" element={<StatsPage />} />
             <Route path="frequentation" element={<AnalyticsPage />} />
             <Route path="reglages" element={<SettingsPage />} />
+            <Route path="compte" element={<AccountPage />} />
           </Route>
           <Route path="*" element={<Navigate to={ADMIN_BASE} replace />} />
         </Routes>

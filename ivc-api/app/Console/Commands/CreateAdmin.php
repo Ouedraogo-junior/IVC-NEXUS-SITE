@@ -22,8 +22,8 @@ class CreateAdmin extends Command
             return self::FAILURE;
         }
 
-        $password = (string) $this->secret('Mot de passe (10 caractères minimum)');
-        if (mb_strlen($password) < 10) {
+        $password = (string) $this->secret('Mot de passe (8 caractères minimum)');
+        if (mb_strlen($password) < 8) {
             $this->error('Mot de passe trop court.');
 
             return self::FAILURE;

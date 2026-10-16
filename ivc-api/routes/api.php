@@ -15,6 +15,7 @@ use App\Http\Controllers\Api\SubmissionController;
 use App\Http\Controllers\Api\TrackController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
+use App\Http\Controllers\Api\Admin\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,7 @@ Route::get('/portfolio/{slug}', [PublicController::class, 'portfolioItem']);
 Route::get('/settings', [PublicController::class, 'settings']);
 
 // Formulaires : 6 envois par minute et par adresse IP
-Route::middleware('throttle:6,1')->group(function () {
+Route::middleware('throttle:6,1,forms')->group(function () {
     Route::post('/contact', [SubmissionController::class, 'contact']);
     Route::post('/quote', [SubmissionController::class, 'quote']);
 });
@@ -38,14 +39,14 @@ Route::middleware('throttle:6,1')->group(function () {
 // Compteur de visites : volontairement SANS session ni cookie (pas de connexion « stateful »)
 Route::post('/track', [TrackController::class, 'store'])
     ->withoutMiddleware(EnsureFrontendRequestsAreStateful::class)
-    ->middleware('throttle:120,1');
+    ->middleware('throttle:120,1,track');
 
 /*
 |--------------------------------------------------------------------------
 | Authentification de l'espace d'administration
 |--------------------------------------------------------------------------
 */
-Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:5,1');
+Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:5,1,login');
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
@@ -59,6 +60,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('admin')->group(function () {
         Route::get('summary', SummaryController::class);
         Route::get('analytics', AnalyticsController::class);
+        Route::put('password', [AccountController::class, 'updatePassword'])->middleware('throttle:5,1,password');
 
         Route::apiResource('posts', AdminPost::class);
         Route::apiResource('testimonials', AdminTestimonial::class);
